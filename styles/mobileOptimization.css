@@ -1,0 +1,204 @@
+@media only screen and (max-width: 1248px) {
+    .event {
+        width:30%;
+    }
+    .slideshowDiv {
+        width:800px;
+    }
+    .convolutedDiv {
+        width:800px;
+    }
+    .slideshowSide {
+        width:100%;
+        right:790px;
+    }
+    .slideshowSide:nth-child(1) {
+        left:790px;
+    }
+    .slideshowImages {
+        animation: slider 70s linear infinite;
+    }
+    
+    @keyframes slider {
+        0% {
+            margin-left:0;
+        } 50% {
+            margin-left:-1740px;
+        } 100% {
+            margin-left:0;
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .introTitle {
+        font-size:80px;
+        padding: 0 10px;
+    }
+    .introDivider {
+      font-size: 13px;
+    }
+    .introDivider::before,
+    .introDivider::after {
+      min-width: 16vw;
+    }
+    .introDate {
+        font-size:35px;
+    }
+
+    .eventSubHeader {
+        padding:0 40px;
+    }
+    .event {
+        width:35%;
+    }
+    .slideshowDiv {
+        width:500px;
+    }
+    .convolutedDiv {
+        width:500px;
+    }
+    .slideshowSide {
+        width:100%;
+        right:490px;
+    }
+    .slideshowSide:nth-child(1) {
+        left:490px;
+    }
+    .slideshowImages {
+        animation: slider 80s linear infinite;
+    }
+    
+    .locationDiv {
+        height:970px;
+    }
+    .locationBox {
+        padding:30px 5px 20px 5px;
+    }
+    .firstIconBox,
+    .otherIconBox {
+        height:45px;
+    }
+    .firstIconHolder,
+    .otherIconHolder {
+        width:60px; height:60px;
+    }
+    .firstEventIcon,
+    .otherEventIcon {
+        width:55px; height:55px;
+    }
+    .firstLocationTitle,
+    .locationTitle {
+        font-size:28px;
+    }
+    .firstLocationDescription,
+    .locationDescription {
+        font-size:15px;
+    }
+
+    @keyframes slider {
+        0% {
+            margin-left:0;
+        } 50% {
+            margin-left:-2040px;
+        } 100% {
+            margin-left:0;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .slideshowDiv {
+        width:350px;
+    }
+    .convolutedDiv {
+        width:350px;
+    }
+    .slideshowSide {
+        width:100%;
+        right:340px;
+    }
+    .slideshowSide:nth-child(1) {
+        left:340px;
+    }
+    .slideshowImages {
+        animation: slider 90s linear infinite;
+    }
+    
+    .locationDiv {
+        height:960px;
+    }
+    .locationBox {
+        padding:30px 5px 20px 5px;
+    }
+    .firstIconBox,
+    .otherIconBox {
+        height:40px;
+    }
+    .firstIconHolder,
+    .otherIconHolder {
+        width:55px; height:55px;
+    }
+    .firstEventIcon,
+    .otherEventIcon {
+        width:50px; height:50px;
+    }
+    .firstLocationTitle,
+    .locationTitle {
+        font-size:23px;
+    }
+    .firstLocationDescription,
+    .locationDescription {
+        font-size:13px;
+    }
+
+    @keyframes slider {
+        0% {
+            margin-left:0;
+        } 50% {
+            margin-left:-2200px;
+        } 100% {
+            margin-left:0;
+        }
+    }
+}
+
+@media only screen and (max-width: 544px) {
+    .event {
+        width:70%;
+    }
+
+    .locationDiv {
+        height:1600px;
+    }
+    .locationFade {
+        top:0px;
+    }
+    .locationBox {
+        padding:25px 5px 15px 5px;
+        width:100%;
+        opacity:0.9;
+        margin-bottom:0;
+    }
+    .firstIconBox,
+    .otherIconBox {
+        height:60px;
+        margin-bottom:30px;
+    }
+    .firstIconHolder,
+    .otherIconHolder {
+        width:75px; height:75px;
+    }
+    .firstEventIcon,
+    .otherEventIcon {
+        width:70px; height:70px;
+    }
+    .firstLocationTitle,
+    .locationTitle {
+        font-size:32px;
+    }
+    .firstLocationDescription,
+    .locationDescription {
+        font-size:15px;
+    }
+}

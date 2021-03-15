@@ -44,6 +44,7 @@ export default function Home() {
               <button className="calendarBtn">ADD TO MY CALENDAR</button>
             </div>
           </div>
+          <div className="introFade"></div>
         </div>
 
         <div className="eventDiv">
@@ -133,6 +134,8 @@ export default function Home() {
         </div>
 
         <div className="locationDiv">
+          <div className="locationFade"></div>
+          <img className="locationImage" src="images/champagne.png"></img>
           <div className="eventHeaderSection">
             <p className="eventHeader">When &amp; Where</p>
             <img className="eventHeaderImage" src="images/rose-icon-01.png"></img>
@@ -169,6 +172,8 @@ export default function Home() {
                 11:30 AM - 01.00 PM<br/>678 Central Square<br/>Cali, Colombia</p>
             </div>
           </div>
+          <p className="googlemapsp"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127450.10983778453!2d-76.59587550763219!3d3.3950618568448467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f0cc4bb3f1%3A0x1f0fb5e952ae6168!2sCali%2C%20Valle%20del%20Cauca%2C%20Colombia!5e0!3m2!1sen!2sus!4v1615692973940!5m2!1sen!2sus" 
+            className="googlemap" allowfullscreen="" loading="lazy"></iframe></p>
         </div>
       </main>
     
