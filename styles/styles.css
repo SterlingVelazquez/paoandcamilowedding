@@ -36,6 +36,7 @@
     font-weight: 400;
     text-shadow:0 0 10px black;
     margin:0;
+    animation: titleSlide 1.5s ease-out;
 }
 .introDivider {
   margin-top:20px;
@@ -49,6 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: titleSlide 1.8s ease-out;
 }
 .introDivider::before,
 .introDivider::after {
@@ -73,10 +75,12 @@
     font-weight: 400;
     text-shadow:0 0 10px black;
     font-size:39px;
+    animation: titleSlide 2.1s ease-out;
 }
 .centerCalendarBtn {
     width:100%;
     text-align:center;
+    animation: titleSlide 2.5s ease-out;
 }
 .calendarBtn {
     text-align:center;
@@ -362,15 +366,12 @@
 
 .fade-in-section {
     opacity: 0;
-    transform: translateY(20vh);
     visibility: hidden;
-    transition: opacity 1200ms ease-out, transform 600ms ease-out,
-      visibility 1200ms ease-out;
-    will-change: opacity, transform, visibility;
+    transition: 2s;
+    will-change: opacity, visibility;
 }
 .fade-in-section.is-visible {
     opacity: 1;
-    transform: none;
     visibility: visible;
 }
 
@@ -381,6 +382,22 @@
         margin-left:-1350px;
     } 100% {
         margin-left:0;
+    }
+}
+
+@keyframes titleSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-10vh);
+        visibility: hidden;
+    } 10% {
+        opacity: 0;
+        transform: translateY(-10vh);
+        visibility: hidden;
+    } 100% {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
     }
 }
 
