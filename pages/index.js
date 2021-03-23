@@ -23,6 +23,26 @@ export default function Home() {
     );
   }
 
+  function Pulse(props) {
+    const [isVisible, setVisible] = React.useState(false);
+    const domRef = React.useRef();
+    React.useEffect(() => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => setVisible(entry.isIntersecting));
+      });
+      observer.observe(domRef.current);
+    }, []);
+    return (
+      <div
+        className={`pulse-section ${isVisible || (typeof domRef.current !== "undefined" &&
+          domRef.current.className.includes("is-visible")) ? 'is-visible' : ''}`}
+        ref={domRef}
+      >
+        {props.children}
+      </div>
+    );
+  }
+
   return (
     <div className="container">
       <Head>
@@ -57,7 +77,7 @@ export default function Home() {
             <div className="event">
               <Fade><div className="iconBox">
                 <div className="iconHolder">
-                  <img className="eventIcon" src="briefcase.svg"></img>
+                  <Pulse><img className="eventIcon" src="briefcase.svg"></img></Pulse>
                 </div>
               </div>
               <p className="eventTitle">Accomodation</p>
@@ -67,7 +87,7 @@ export default function Home() {
             <div className="event">
               <Fade><div className="iconBox">
                 <div className="iconHolder">
-                  <img className="eventIcon" src="dress.svg"></img>
+                  <Pulse><img className="eventIcon" src="dress.svg"></img></Pulse>
                 </div>
               </div>
               <p className="eventTitle">What To Wear</p>
@@ -77,7 +97,7 @@ export default function Home() {
             <div className="event">
               <Fade><div className="iconBox">
                 <div className="iconHolder">
-                  <img className="eventIcon" src="car.svg"></img>
+                  <Pulse><img className="eventIcon" src="car.svg"></img></Pulse>
                 </div>
               </div>
               <p className="eventTitle">Parking Area</p>
@@ -87,7 +107,7 @@ export default function Home() {
             <div className="event">
               <Fade><div className="iconBox">
                 <div className="iconHolder">
-                  <img className="eventIcon" src="camera.svg"></img>
+                  <Pulse><img className="eventIcon" src="camera.svg"></img></Pulse>
                 </div>
               </div>
               <p className="eventTitle">Documentation</p>
@@ -97,7 +117,7 @@ export default function Home() {
             <div className="event">
               <Fade><div className="iconBox">
                 <div className="iconHolder">
-                  <img className="eventIcon" src="party-hat.svg"></img>
+                  <Pulse><img className="eventIcon" src="party-hat.svg"></img></Pulse>
                 </div>
               </div>
               <p className="eventTitle">Celebration</p>
@@ -107,7 +127,7 @@ export default function Home() {
             <div className="event">
               <Fade><div className="iconBox">
                 <div className="iconHolder">
-                  <img className="eventIcon" src="food.svg"></img>
+                  <Pulse><img className="eventIcon" src="food.svg"></img></Pulse>
                 </div>
               </div>
               <p className="eventTitle">Food &amp; Drinks</p>
@@ -144,7 +164,7 @@ export default function Home() {
             <div className="locationBox">
               <div className="firstIconBox">
                 <div className="firstIconHolder">
-                  <img className="firstEventIcon" src="heart.svg"></img>
+                  <Pulse><img className="firstEventIcon" src="heart.svg"></img></Pulse>
                 </div>
               </div>
               <p className="firstLocationTitle">The Ceremony</p>
@@ -154,7 +174,7 @@ export default function Home() {
             <div className="locationBox">
               <div className="otherIconBox">
                 <div className="otherIconHolder">
-                  <img className="otherEventIcon" src="bouquet.svg"></img>
+                  <Pulse><img className="otherEventIcon" src="bouquet.svg"></img></Pulse>
                 </div>
               </div>
               <p className="locationTitle">The Reception</p>
@@ -164,7 +184,7 @@ export default function Home() {
             <div className="locationBox">
               <div className="otherIconBox">
                 <div className="otherIconHolder">
-                  <img className="otherEventIcon" src="party.svg"></img>
+                  <Pulse><img className="otherEventIcon" src="party.svg"></img></Pulse>
                 </div>
               </div>
               <p className="locationTitle">The Party</p>
