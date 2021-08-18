@@ -1,6 +1,78 @@
+@media only screen and (max-width: 2040px) {
+    .arrowBox {
+        right:90vw; 
+    }
+    .arrowBox:nth-child(9) {
+        left:90vw;
+    }
+    .fullScreenImage {
+        max-width:70%;
+    }
+}
+
+@media only screen and (max-width: 1680px) {
+    .arrowBox {
+        right:91vw; 
+    }
+    .arrowBox:nth-child(9) {
+        left:91vw;
+    }
+    .fullScreenImage {
+        max-width:80%;
+    }
+}
+
+@media only screen and (max-width: 1390px) {
+    .arrowBox {
+        right:86vw;
+        top:auto;
+        bottom:2rem;
+        transform:rotateZ(45deg);
+        background-color:rgba(0, 0, 0, 0.787);
+    }
+    .arrowBox:nth-child(9) {
+        left:86vw;
+        transform:rotateZ(225deg);
+    }
+    .fullScreenImage {
+        max-width:100%;
+    }
+}
+
 @media only screen and (max-width: 1248px) {
+    
+    .introTitle {
+        font-size:130px;
+        padding: 0 10px;
+    }
+    .introDivider {
+      font-size: 22px;
+    }
+    .introDivider::before,
+    .introDivider::after {
+      min-width: 20vw;
+    }
+    .introDate {
+        font-size:44px;
+    }
+
     .event {
         width:30%;
+    }
+    .eventHeader {
+        font-size:65px;
+    }
+    .eventSubHeader {
+        font-size:21px;
+    }
+    .iconBox {
+        height:65px;
+    }
+    .iconHolder {
+        width:75px; height:75px;
+    }
+    .eventIcon {
+        width:65px; height:65px;
     }
     .slideshowDiv {
         width:800px;
@@ -18,15 +90,73 @@
     .slideshowImages {
         animation: slider 70s linear infinite;
     }
+
+    .locationTitle, .locationBox.main .locationTitle {
+        font-size:38px;
+    }
+    .locationDescription, .locationBox.main .locationDescription {
+        font-size:19px;
+    }
     
     @keyframes slider {
         0% {
             margin-left:0;
         } 50% {
-            margin-left:-1740px;
+            margin-left:-2565px;
         } 100% {
             margin-left:0;
         }
+    }
+}
+
+@media only screen and (max-width: 1112px) {
+    .arrowBox {
+        right:84vw;
+    }
+    .arrowBox:nth-child(9) {
+        left:84vw;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    .introTitle {
+        font-size:110px;
+        padding: 0 10px;
+    }
+    .introDivider {
+      font-size: 20px;
+    }
+    .introDate {
+        font-size:42px;
+    }
+
+    .eventHeader {
+        font-size:60px;
+    }
+    .eventHeaderImage {
+        transform:translate(0%, -50%) scale(1.4);
+    }
+    .eventSubHeader {
+        font-size:20px;
+    }
+    
+    .locationDiv {
+        height:1400px;
+    }
+    .locIconBox {
+        height:60px;
+    }
+    .locIconHolder, .locationBox.main .locIconHolder {
+        width:75px; height:75px;
+    }
+    .locEventIcon, .locationBox.main .locEventIcon {
+        width:70px; height:70px;
+    }
+    .locationTitle, .locationBox.main .locationTitle {
+        font-size:34px;
+    }
+    .locationDescription, .locationBox.main .locationDescription {
+        font-size:18px;
     }
 }
 
@@ -46,11 +176,27 @@
         font-size:35px;
     }
 
+    .eventHeader {
+        font-size:55px;
+    }
+    .eventHeaderImage {
+        transform:translate(0%, -50%) scale(1.4);
+    }
     .eventSubHeader {
+        font-size:19px;
         padding:0 40px;
     }
     .event {
         width:35%;
+    }
+    .iconBox {
+        height:60px;
+    }
+    .iconHolder {
+        width:75px; height:75px;
+    }
+    .eventIcon {
+        width:65px; height:65px;
     }
     .slideshowDiv {
         width:500px;
@@ -70,40 +216,68 @@
     }
     
     .locationDiv {
-        height:970px;
+        height:2350px;
     }
     .locationBox {
-        padding:30px 5px 20px 5px;
+        padding:50px 5px 20px 5px;
+        width:100%;
     }
-    .firstIconBox,
-    .otherIconBox {
-        height:45px;
+    .locIconBox {
+        height:75px;
     }
-    .firstIconHolder,
-    .otherIconHolder {
-        width:60px; height:60px;
+    .locIconHolder, .locationBox.main .locIconHolder {
+        width:80px; height:80px;
     }
-    .firstEventIcon,
-    .otherEventIcon {
-        width:55px; height:55px;
+    .locEventIcon, .locationBox.main .locEventIcon {
+        width:75px; height:75px;
     }
-    .firstLocationTitle,
-    .locationTitle {
-        font-size:28px;
+    .locationTitle, .locationBox.main .locationTitle {
+        font-size:45px;
     }
-    .firstLocationDescription,
-    .locationDescription {
-        font-size:15px;
+    .locationDescription, .locationBox.main .locationDescription {
+        font-size:19px;
+    }
+
+    .googlemap {
+        height:600px;
+    }
+
+    .arrowBox {
+        right:85vw;
+        width:80px; height:80px;
+    }
+    .arrowBox:nth-child(9) {
+        left:85vw;
+    }
+    .arrow {
+        width:30px;
+        height:30px;
+        top:50%; left:50%;
     }
 
     @keyframes slider {
         0% {
             margin-left:0;
         } 50% {
-            margin-left:-2040px;
+            margin-left:-2860px;
         } 100% {
             margin-left:0;
         }
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .arrowBox {
+        width:65px;
+        height:65px;
+        right:84vw;
+    }
+    .arrowBox:nth-child(9) {
+        left:84vw;
+    }
+    .arrow {
+        width:20px;
+        height:20px;
     }
 }
 
@@ -126,37 +300,46 @@
     }
     
     .locationDiv {
-        height:960px;
+        height:2350px;
     }
     .locationBox {
-        padding:30px 5px 20px 5px;
+        padding:50px 5px 20px 5px;
+        width:100%;
     }
-    .firstIconBox,
-    .otherIconBox {
-        height:40px;
+    .locIconBox {
+        height:75px;
     }
-    .firstIconHolder,
-    .otherIconHolder {
-        width:55px; height:55px;
+    .locIconHolder, .locationBox.main .locIconHolder {
+        width:80px; height:80px;
     }
-    .firstEventIcon,
-    .otherEventIcon {
-        width:50px; height:50px;
+    .locEventIcon, .locationBox.main .locEventIcon {
+        width:75px; height:75px;
     }
-    .firstLocationTitle,
-    .locationTitle {
-        font-size:23px;
+    .locationTitle, .locationBox.main .locationTitle {
+        font-size:45px;
     }
-    .firstLocationDescription,
-    .locationDescription {
-        font-size:13px;
+    .locationDescription, .locationBox.main .locationDescription {
+        font-size:19px;
+    }
+
+    .arrowBox {
+        width:65px;
+        height:65px;
+        right:84vw;
+    }
+    .arrowBox:nth-child(9) {
+        left:84vw;
+    }
+    .arrow {
+        width:20px;
+        height:20px;
     }
 
     @keyframes slider {
         0% {
             margin-left:0;
         } 50% {
-            margin-left:-2200px;
+            margin-left:-3000px;
         } 100% {
             margin-left:0;
         }
@@ -168,37 +351,78 @@
         width:70%;
     }
 
-    .locationDiv {
-        height:1600px;
-    }
     .locationFade {
         top:0px;
     }
+    .locationDiv {
+        height:2350px;
+    }
     .locationBox {
-        padding:25px 5px 15px 5px;
+        padding:50px 5px 20px 5px;
         width:100%;
-        opacity:0.9;
-        margin-bottom:0;
     }
-    .firstIconBox,
-    .otherIconBox {
-        height:60px;
-        margin-bottom:30px;
+    .locIconBox {
+        height:75px;
     }
-    .firstIconHolder,
-    .otherIconHolder {
+    .locIconHolder, .locationBox.main .locIconHolder {
+        width:80px; height:80px;
+    }
+    .locEventIcon, .locationBox.main .locEventIcon {
         width:75px; height:75px;
     }
-    .firstEventIcon,
-    .otherEventIcon {
-        width:70px; height:70px;
+    .locationTitle, .locationBox.main .locationTitle {
+        font-size:45px;
     }
-    .firstLocationTitle,
-    .locationTitle {
-        font-size:32px;
+    .locationDescription, .locationBox.main .locationDescription {
+        font-size:19px;
     }
-    .firstLocationDescription,
-    .locationDescription {
-        font-size:15px;
+}
+
+@media only screen and (max-width: 455px) {
+    .arrowBox {
+        right:80vw;
+        width:60px;
+        height:60px;
+    }
+    .arrowBox:nth-child(9) {
+        left:80vw;
+    }
+    .arrow {
+        width:20px;
+        height:20px;
+        top:50%; left:50%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .arrowBox {
+        right:75vw;
+    }
+    .arrowBox:nth-child(9) {
+        left:75vw;
+    }
+}
+
+@media only screen and (max-width: 314px) {
+    .arrowBox {
+        width:50px;
+        height:50px;
+        right:78vw;
+    }
+    .arrowBox:nth-child(9) {
+        left:78vw;
+    }
+    .arrow {
+        width:18px;
+        height:18px;
+    }
+}
+
+@media only screen and (max-width: 265px) {
+    .arrowBox {
+        right:74vw;
+    }
+    .arrowBox:nth-child(9) {
+        left:74vw;
     }
 }
