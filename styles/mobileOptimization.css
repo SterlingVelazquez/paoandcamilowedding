@@ -164,9 +164,12 @@
     .introTitle {
         font-size:80px;
         padding: 0 10px;
+        -webkit-text-stroke-width: 0.5px;
+        text-shadow:none;
     }
     .introDivider {
-      font-size: 13px;
+      font-size: 16px;
+      font-weight:100;
     }
     .introDivider::before,
     .introDivider::after {
@@ -174,6 +177,8 @@
     }
     .introDate {
         font-size:35px;
+        -webkit-text-stroke-width: 0.4px;
+        text-shadow:none;
     }
 
     .eventHeader {

@@ -113,8 +113,8 @@ class Home extends React.Component {
 
         <main className="main-wrapper">
           <div className="introDiv">
-            <video className="introVideo show" id="introvideo" src="images/pop.mp4" autoPlay muted loop></video>
-            <img className="introImage" id="introimage" src="images/paocamiloengaged.jpg"></img>
+            <video className="introVideo" id="introvideo" src="images/pop.mp4" autoPlay muted loop></video>
+            <img className="introImage show" id="introimage" src="images/paocamiloengaged.jpg"></img>
             <div className="introOverlay"></div>
             <div className="introHeaderSection">
               <p className="introTitle">Paola &amp; Camilo</p>
