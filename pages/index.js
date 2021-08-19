@@ -113,7 +113,7 @@ class Home extends React.Component {
 
         <main className="main-wrapper">
           <div className="introDiv">
-            <video className="introVideo" id="introvideo" src="images/pop.mp4" autoPlay muted loop></video>
+            <video className="introVideo" id="introvideo" src="images/pop.mp4" autoPlay muted playsInline loop preload="auto"></video>
             <img className="introImage show" id="introimage" src="images/paocamiloengaged.jpg"></img>
             <div className="introOverlay"></div>
             <div className="introHeaderSection">
@@ -223,9 +223,9 @@ class Home extends React.Component {
                       <Pulse><img className="locEventIcon" src="party.svg"></img></Pulse>
                     </div>
                   </div>
-                  <p className="locationTitle">The Welcome</p>
+                  <p className="locationTitle">Welcome Cocktail</p>
                   <p className="locationDescription">Friday, November 26, 2021<br />
-                    6:00 PM - 8:00 PM<br />Hilton Garden Inn<br />Cl. 15a #100 21, Cali<br />
+                    7:00 PM - 10:00 PM<br />Hilton Garden Inn<br />Cl. 15a #100 21, Cali<br />
                     <a className="hotelLink" href="https://goo.gl/maps/mVEy4BbeqkemzkV98" target="_blank" rel="noopener noreferrer">Open in Google Maps</a></p>
                 </div>
                 <div className="locationBox main" id="loc2" onClick={e => this.switchMap(2)}>
@@ -236,7 +236,7 @@ class Home extends React.Component {
                   </div>
                   <p className="locationTitle">The Ceremony</p>
                   <p className="locationDescription">Saturday, November 27, 2021<br />
-                    4:00 PM - 4:30 PM<br />Iglesia La Merced<br />Cra. 3 #6 - 62, Cali<br />
+                    4:00 PM - 5:00 PM<br />Iglesia La Merced<br />Cra. 3 #6 - 62, Cali<br />
                     <a className="hotelLink" href="https://goo.gl/maps/cqjbkbDo9JdHFSTx5" target="_blank" rel="noopener noreferrer">Open in Google Maps</a></p>
                 </div>
                 <div className="locationBox" id="loc3" onClick={e => this.switchMap(3)}>
@@ -247,7 +247,7 @@ class Home extends React.Component {
                   </div>
                   <p className="locationTitle">The Reception</p>
                   <p className="locationDescription">Saturday, November 27, 2021<br />
-                    6:00 PM - 12:00 AM<br />Club Campestre Farallones<br />Av. El Banco, Cra. 127, Cali<br />
+                    6:00 PM - 3:00 AM<br />Club Campestre Farallones<br />Av. El Banco, Cra. 127, Cali<br />
                     <a className="hotelLink" href="https://goo.gl/maps/9izkwh4BnDosC35N9" target="_blank" rel="noopener noreferrer">Open in Google Maps</a></p>
                 </div>
               </div>
