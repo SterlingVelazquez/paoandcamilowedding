@@ -1,4 +1,14 @@
 @media only screen and (max-width: 2040px) {
+    .photo {
+        margin:0 22px;
+    }
+    #photogallery1 {
+        margin-bottom:300px;
+    }
+    #photogallery2 {
+        margin-top:150px;
+    }
+
     .arrowBox {
         right:90vw; 
     }
@@ -11,6 +21,16 @@
 }
 
 @media only screen and (max-width: 1680px) {
+    .photo {
+        margin:0 20px;
+    }
+    #photogallery2 {
+        margin-top:100px;
+    }
+    .events {
+        width:35%;
+    }
+    
     .arrowBox {
         right:91vw; 
     }
@@ -23,6 +43,19 @@
 }
 
 @media only screen and (max-width: 1390px) {
+    .photo {
+        margin:0 16px;
+    }
+    .photo2 {
+        margin:0 20px;
+    }
+    #photogallery2 {
+        margin-top:80px;
+    }
+    .events {
+        width:41%;
+    }
+
     .arrowBox {
         right:86vw;
         top:auto;
@@ -59,57 +92,100 @@
     .event {
         width:30%;
     }
-    .eventHeader {
-        font-size:65px;
-    }
-    .eventSubHeader {
-        font-size:21px;
-    }
-    .iconBox {
-        height:65px;
-    }
-    .iconHolder {
-        width:75px; height:75px;
-    }
-    .eventIcon {
-        width:65px; height:65px;
-    }
-    .slideshowDiv {
-        width:800px;
-    }
-    .convolutedDiv {
-        width:800px;
-    }
-    .slideshowSide {
-        width:100%;
-        right:790px;
-    }
-    .slideshowSide:nth-child(1) {
-        left:790px;
-    }
-    .slideshowImages {
-        animation: slider 70s linear infinite;
-    }
-
-    .locationTitle, .locationBox.main .locationTitle {
-        font-size:38px;
-    }
-    .locationDescription, .locationBox.main .locationDescription {
-        font-size:19px;
-    }
-    
-    @keyframes slider {
-        0% {
-            margin-left:0;
-        } 50% {
-            margin-left:-2565px;
-        } 100% {
-            margin-left:0;
-        }
-    }
 }
 
 @media only screen and (max-width: 1112px) {
+    .rsvpButton, .rsvpButton2 {
+        height:55px; width:165px;
+    }
+
+    .eventHeaderSection {
+        margin:0 0 30px 0;
+    }
+    .eventHeader {
+        font-size:100px;
+        margin-top:80px;
+    }
+    .events {
+        width:87%;
+        margin:0 20px;
+        padding-bottom:0;
+    }
+    .eventTitle {
+        font-size:32px;
+    }
+    .eventDescription {
+        line-height:40px;
+        font-size:21px;
+    }
+
+    .photoGallery, .photoGallery2 {
+        position:relative;
+        margin-top:70px;
+        margin-bottom:100px;
+        height:100%; max-height:none;
+    }
+    .photoGallery2 {
+        margin-top:0px;
+    }
+    #photogallery1 {
+        margin-bottom:30px;
+    }
+    #beach, #column, #london, #snow, #hall, #mountain, #roman, #train {
+        transform:none;
+    }
+    .photo {
+        margin:25px 0;
+        height:auto;
+        width:88%;
+        max-width:none;
+    }
+    .photo2 {
+        margin:25px 0;
+        height:auto;
+        width: 88%;
+        max-width:none;
+    }
+
+    #faqHeader {
+        margin-top:0;
+    }
+    .faqSection {
+        margin:60px 0 120px 0;
+        width:87%;
+    }
+    .question {
+        font-size:28px;
+        padding: 35px 30px 35px 35px;
+        height: auto; width: 100%;
+        letter-spacing:1px;
+    }
+    .question:after {
+        display:none;
+        font-size: 31px;
+        margin-left: 30px;
+    }
+    .answerDiv {
+        padding-left:35px;
+    }
+    .answer {
+        font-size:22px;
+    }
+
+    .footer {
+        font-size:30px;
+    }
+    .details {
+        display:block;
+        width:100%;
+        line-height:50px;
+    }
+    .footerRSVP {
+        padding:0 20px;
+        display:block;
+        width:100%;
+    }
+
     .arrowBox {
         right:84vw;
     }
@@ -128,35 +204,6 @@
     }
     .introDate {
         font-size:42px;
-    }
-
-    .eventHeader {
-        font-size:60px;
-    }
-    .eventHeaderImage {
-        transform:translate(0%, -50%) scale(1.4);
-    }
-    .eventSubHeader {
-        font-size:20px;
-    }
-    
-    .locationDiv {
-        height:1400px;
-    }
-    .locIconBox {
-        height:60px;
-    }
-    .locIconHolder, .locationBox.main .locIconHolder {
-        width:75px; height:75px;
-    }
-    .locEventIcon, .locationBox.main .locEventIcon {
-        width:70px; height:70px;
-    }
-    .locationTitle, .locationBox.main .locationTitle {
-        font-size:34px;
-    }
-    .locationDescription, .locationBox.main .locationDescription {
-        font-size:18px;
     }
 }
 
@@ -181,8 +228,11 @@
         text-shadow:none;
     }
 
+    .eventHeaderSection {
+        margin:0 0 10px 0;
+    }
     .eventHeader {
-        font-size:55px;
+        font-size:75px;
     }
     .eventHeaderImage {
         transform:translate(0%, -50%) scale(1.4);
@@ -194,57 +244,10 @@
     .event {
         width:35%;
     }
-    .iconBox {
-        height:60px;
-    }
-    .iconHolder {
-        width:75px; height:75px;
-    }
-    .eventIcon {
-        width:65px; height:65px;
-    }
-    .slideshowDiv {
-        width:500px;
-    }
-    .convolutedDiv {
-        width:500px;
-    }
-    .slideshowSide {
-        width:100%;
-        right:490px;
-    }
-    .slideshowSide:nth-child(1) {
-        left:490px;
-    }
-    .slideshowImages {
-        animation: slider 80s linear infinite;
-    }
-    
-    .locationDiv {
-        height:2350px;
-    }
-    .locationBox {
-        padding:50px 5px 20px 5px;
-        width:100%;
-    }
-    .locIconBox {
-        height:75px;
-    }
-    .locIconHolder, .locationBox.main .locIconHolder {
-        width:80px; height:80px;
-    }
-    .locEventIcon, .locationBox.main .locEventIcon {
-        width:75px; height:75px;
-    }
-    .locationTitle, .locationBox.main .locationTitle {
-        font-size:45px;
-    }
-    .locationDescription, .locationBox.main .locationDescription {
-        font-size:19px;
-    }
 
-    .googlemap {
-        height:600px;
+    .faqSection {
+        margin:60px 0 90px 0;
+        width:87%;
     }
 
     .arrowBox {
@@ -259,19 +262,17 @@
         height:30px;
         top:50%; left:50%;
     }
-
-    @keyframes slider {
-        0% {
-            margin-left:0;
-        } 50% {
-            margin-left:-2860px;
-        } 100% {
-            margin-left:0;
-        }
-    }
 }
 
 @media only screen and (max-width: 690px) {
+    .eventHeaderSection {
+        padding: 0 20px;
+    }
+
+    .footer {
+        font-size:26px;
+    }
+
     .arrowBox {
         width:65px;
         height:65px;
@@ -287,44 +288,9 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .slideshowDiv {
-        width:350px;
-    }
-    .convolutedDiv {
-        width:350px;
-    }
-    .slideshowSide {
-        width:100%;
-        right:340px;
-    }
-    .slideshowSide:nth-child(1) {
-        left:340px;
-    }
-    .slideshowImages {
-        animation: slider 90s linear infinite;
-    }
-    
-    .locationDiv {
-        height:2350px;
-    }
-    .locationBox {
-        padding:50px 5px 20px 5px;
-        width:100%;
-    }
-    .locIconBox {
-        height:75px;
-    }
-    .locIconHolder, .locationBox.main .locIconHolder {
-        width:80px; height:80px;
-    }
-    .locEventIcon, .locationBox.main .locEventIcon {
-        width:75px; height:75px;
-    }
-    .locationTitle, .locationBox.main .locationTitle {
-        font-size:45px;
-    }
-    .locationDescription, .locationBox.main .locationDescription {
-        font-size:19px;
+    .faqSection {
+        margin:60px 0 70px 0;
+        width:87%;
     }
 
     .arrowBox {
@@ -339,51 +305,27 @@
         width:20px;
         height:20px;
     }
-
-    @keyframes slider {
-        0% {
-            margin-left:0;
-        } 50% {
-            margin-left:-3000px;
-        } 100% {
-            margin-left:0;
-        }
-    }
 }
 
 @media only screen and (max-width: 544px) {
-    .event {
-        width:70%;
+    .hotel {
+        display:block;
+        width:87%;
+    }
+    .hotel:nth-child(3) {
+        margin-left:00px;
     }
 
-    .locationFade {
-        top:0px;
-    }
-    .locationDiv {
-        height:2350px;
-    }
-    .locationBox {
-        padding:50px 5px 20px 5px;
-        width:100%;
-    }
-    .locIconBox {
-        height:75px;
-    }
-    .locIconHolder, .locationBox.main .locIconHolder {
-        width:80px; height:80px;
-    }
-    .locEventIcon, .locationBox.main .locEventIcon {
-        width:75px; height:75px;
-    }
-    .locationTitle, .locationBox.main .locationTitle {
-        font-size:45px;
-    }
-    .locationDescription, .locationBox.main .locationDescription {
-        font-size:19px;
+    .event {
+        width:70%;
     }
 }
 
 @media only screen and (max-width: 455px) {
+    .eventHeader {
+        font-size:65px;
+    }
+
     .arrowBox {
         right:80vw;
         width:60px;
