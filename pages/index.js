@@ -210,7 +210,7 @@ class Home extends React.Component {
                       Cl. 15a #100 21, Cali<br />
                       Valle del Cauca, Colombia
                     </p>
-                    <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/mVEy4BbeqkemzkV98">Open in Google Maps</a>
+                    <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/mVEy4BbeqkemzkV98">Open in Google Maps</a><br />
                     <button className="rsvpButton2 website"><a target="_blank" rel="noopener noreferrer" href="https://www.hilton.com/en/hotels/cloccgi-hilton-garden-inn-cali-ciudad-jardin/?SEO_id=GMB-GI-CLOCCGI&y_source=1_MTkzOTkzNzMtNzE1LWxvY2F0aW9uLmdvb2dsZV93ZWJzaXRlX292ZXJyaWRl">Website</a></button>
                   </div>
                   <div className="hotel">
@@ -221,7 +221,7 @@ class Home extends React.Component {
                       Cra. 101 #15a-35, Cali<br />
                       Valle del Cauca, Colombia
                     </p>
-                    <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/ctkT5Q2doREXithN7">Open in Google Maps</a>
+                    <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/ctkT5Q2doREXithN7">Open in Google Maps</a><br />
                     <button className="rsvpButton2 website"><a target="_blank" rel="noopener noreferrer" href="https://hotelesms.com/ms-ciudad-jardin/">Website</a></button>
                   </div>
                 </p>
