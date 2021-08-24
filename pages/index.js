@@ -130,7 +130,7 @@ class Home extends React.Component {
             <div className="events">
               <Fade>
                 <p className="eventTitle">RSVP</p>
-                <p className="eventDescription"> Please let us know if you can make it by October 16, 2021. We can’t wait to see you!</p>
+                <p className="eventDescription"> Please let us know if you can make it by November 1, 2021. We can’t wait to see you!</p>
                 <button className="rsvpButton2 website">RSVP</button>
                 <p className="eventTitle">Schedule</p>
                 <p className="eventDescription">2:30 p.m. Shuttle from hotels begin</p>
@@ -142,18 +142,28 @@ class Home extends React.Component {
             </div>
             <div className="events">
               <Fade>
-                <p className="eventTitle">Location</p>
-                <p className="eventDescription">
-                  Iglesia La Merced<br />
-                  Cra. 3 #6 - 62, Cali<br />
-                  Valle del Cauca, Colombia</p>
-                <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps?q=Iglesia+La+Merced,+Cra.+3+%236+-+62,+Cali,+Valle+del+Cauca,+Colombia&ftid=0x8e30a664d7141a83:0x9dc96eb907465bd5&hl=en-US&gl=us&entry=gps&shorturl=1">Open in Google Maps</a>
+                <p className="eventTitle">Locations</p>
+                <div className="location">
+                  <p className="eventDescription"><b>Ceremony</b><br /></p>
+                  <p className="eventDescription">
+                    Iglesia La Merced<br />
+                    Cra. 3 #6 - 62, Cali<br />
+                    Valle del Cauca, Colombia
+                  </p>
+                  <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps?q=Iglesia+La+Merced,+Cra.+3+%236+-+62,+Cali,+Valle+del+Cauca,+Colombia&ftid=0x8e30a664d7141a83:0x9dc96eb907465bd5&hl=en-US&gl=us&entry=gps&shorturl=1">Open in Google Maps</a>
+                </div>
+                <div className="location">
+                  <p className="eventDescription"><b>Reception</b><br /></p>
+                  <p className="eventDescription">
+                    Club Campestre Farallones<br />
+                    Av. El Banco, Cra. 127, Cali<br />
+                    Valle del Cauca, Colombia
+                  </p>
+                  <a className="eventDescription mapLink" href="https://goo.gl/maps/9izkwh4BnDosC35N9" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+                </div>
                 <p className="eventTitle">Transportation</p>
-                <p className="eventDescription">
-                  A complimentary bus will be available from our recommended hotels to Iglesia La Merced starting at
-                  2:30PM. The first return trip to the hotels will begin at 1am.
-                </p>
-                <p className="eventDescription">If you wish to drive yourself, the venue has plenty of parking.</p>
+                <p className="eventDescription">A complimentary bus will be available from our recommended hotels to Iglesia la Merced and to Club Campestre Farallones. We will also have return trips at the end of the night to the recommended hotels.</p>
+                <p className="eventDescription">If you wish to drive there is also plenty of parking at the reception or you may use Uber or taxis.</p>
               </Fade>
             </div>
             <div className="photoGallery" id="photogallery1">
@@ -171,13 +181,11 @@ class Home extends React.Component {
             <div className="events">
               <Fade>
                 <p className="eventTitle">Travel</p>
-                <p className="eventDescription">The venue is approximately 45 minutes away from Cali International Airport,
-                  or a little over an hour from the Hilton Garden Inn Hotel. Iglesia La Merced is approximately 1 hour from 
-                  Hotel MS Ciudad, and not accessible by metro. If traveling to the area we recommend getting a rental car.</p>
+                <p className="eventDescription">The recommended hotels are approximately 40 minutes from Cali international Airport. Iglesia la Merced is approximately 25 minutes from the recommended hotels. Club Campestre Farallones is approximately 
+                35 minutes from the church. We will provide complimentary transportation to the wedding day events. We also recommend using Uber or local taxis if needed.</p>
                 <p className="eventTitle">Wedding Day Transportation</p>
                 <p className="eventDescription">
-                  If you wish to drive yourself to and from the venue there is plenty of parking. Since this is a rural area,
-                  rideshares won’t be available.
+                If you wish to drive yourself to and from the venues, parking will be available. You also have the option of using Uber or local taxis. We will also have complimentary transportation running to and from the venues from our recommended hotels.
                 </p>
                 <p className="eventDescription">We will have a complimentary bus running to and from the venue from our two recommended hotels.</p>
                 <p className="eventDescription"><b>Bus Schedule</b></p>
@@ -197,22 +205,22 @@ class Home extends React.Component {
                   other nights of your trip so that you don’t need to spend as much time driving back and forth.
                   <br />
                   <div className="hotel">
-                    <p className="eventDescription"><b>Hilton Garden Inn</b><br/>
+                    <p className="eventDescription"><b>Hilton Garden Inn</b><br />
                       Average Rate $60/night
                     </p>
                     <p className="eventDescription">
-                      Cl. 15a #100 21, Cali<br/>
+                      Cl. 15a #100 21, Cali<br />
                       Valle del Cauca, Colombia
                     </p>
                     <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/mVEy4BbeqkemzkV98">Open in Google Maps</a>
                     <button className="rsvpButton2 website"><a target="_blank" rel="noopener noreferrer" href="https://www.hilton.com/en/hotels/cloccgi-hilton-garden-inn-cali-ciudad-jardin/?SEO_id=GMB-GI-CLOCCGI&y_source=1_MTkzOTkzNzMtNzE1LWxvY2F0aW9uLmdvb2dsZV93ZWJzaXRlX292ZXJyaWRl">Website</a></button>
                   </div>
                   <div className="hotel">
-                    <p className="eventDescription"><b>Hotel MS Ciudad Jardín Plus</b><br/>
+                    <p className="eventDescription"><b>Hotel MS Ciudad Jardín Plus</b><br />
                       Average Rate $50/night
                     </p>
                     <p className="eventDescription">
-                      Cra. 101 #15a-35, Cali<br/>
+                      Cra. 101 #15a-35, Cali<br />
                       Valle del Cauca, Colombia
                     </p>
                     <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/ctkT5Q2doREXithN7">Open in Google Maps</a>
@@ -237,39 +245,49 @@ class Home extends React.Component {
               <Fade>
                 <button className="question" onClick={e => triggerCollapse(0)}>Where is the venue? Is it close to Cali?</button>
                 <div class="answerDiv">
-                  <p className="answer">Sample text...</p>
+                  <p className="answer">Both venues, the church ceremony and the reception are located in Cali, Colombia. The Church Ceremony en La Inglesia la Merced is
+                    located approximately 30 minutes from the recommended hotels and the reception in Club Campestre Farallones is approximately 17 minutes from the recommended
+                    hotels. If you are hoping to spend more time and explore the city, we also recommend to stay in the Intercontinental Hotel.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(1)}>What time is the ceremony?</button>
                 <div class="answerDiv">
-                  <p className="answer">Sample text...</p>
+                  <p className="answer">The church ceremony is at 4:00 pm and the reception will start at 6:00pm.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(2)}>What should I wear?</button>
                 <div class="answerDiv">
-                  <p className="answer">Sample text...</p>
+                  <p className="answer">The dress code is Black-Tie. Ladies must wear a floor length gown and gentlemen must wear a tuxedo. If you need any help here is a handy
+                    guide for black-tie attire.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(3)}>What is the weather like?</button>
                 <div class="answerDiv">
-                  <p className="answer">Sample text...</p>
+                  <p className="answer">The weather in Cali in November is on average 83 Deg F during the day and can go as low as 65 Deg F at night, due to its location in the
+                    mountains. The reception will be indoors but the area will not be air conditioned since it’s an open space with cool temperature.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(4)}>What about Covid?</button>
                 <div class="answerDiv">
-                  <p className="answer">Sample text...</p>
+                  <p className="answer">We are hoping that the world will be a bit closer to normal by the time November comes around, but we will be closely following
+                    recommended guidelines at our wedding. Even though it is not required, for the safety of our guests we recommend to get vaccinated. At the moment a PCR test is
+                    not required to enter Colombia but you do have to present a Check-Mig registration using the the following link: migracioncolombia.gov.co.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(5)}>Where are you registered?</button>
                 <div class="answerDiv">
-                  <p className="answer">Sample text...</p>
+                  <p className="answer">We are not registered, your presence at our wedding is the greatest gift of all. If it is your wish to  bless us with a gift, we would
+                    greatly appreciate your contribution to our honeymoon fund.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(6)}>Is there parking at the venue?</button>
                 <div class="answerDiv">
-                  <p className="answer">Sample text...</p>
+                  <p className="answer">The parking at the church can be a little tricky but there is plenty of parking at the reception. We do recommend to take advantage of
+                    our complimentary transportation from the recommended hotels. You may also use Uber or taxis.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(7)}>Can we bring our kids?</button>
                 <div class="answerDiv">
-                  <p className="answer">Sample text...</p>
+                  <p className="answer">We love your kids, but this is an adults only wedding.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(8)}>How do I RSVP?</button>
                 <div class="answerDiv">
-                  <p className="answer">Sample text...</p>
+                  <p className="answer" style={{ marginBottom: "0px" }}>You can RSVP here:</p>
+                  <button className="rsvpButton2 website">RSVP</button>
+                  <p className="answer">You will also receive calls from our wedding planner for confirmation.</p>
                 </div>
               </Fade>
             </div>
@@ -283,8 +301,8 @@ class Home extends React.Component {
           <div className="footer">
             <img className="footerBackground" src="images/champagne.png"></img>
             <p className="details">
-              November 27, 2021<br/>
-              Iglesia La Merced<br/>
+              November 27, 2021<br />
+              Iglesia La Merced<br />
               4:00PM
             </p>
             <div className="footerRSVP">
