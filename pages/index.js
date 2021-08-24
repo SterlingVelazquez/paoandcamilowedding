@@ -181,11 +181,11 @@ class Home extends React.Component {
             <div className="events">
               <Fade>
                 <p className="eventTitle">Travel</p>
-                <p className="eventDescription">The recommended hotels are approximately 40 minutes from Cali international Airport. Iglesia la Merced is approximately 25 minutes from the recommended hotels. Club Campestre Farallones is approximately 
-                35 minutes from the church. We will provide complimentary transportation to the wedding day events. We also recommend using Uber or local taxis if needed.</p>
+                <p className="eventDescription">The recommended hotels are approximately 40 minutes from Cali international Airport. Iglesia la Merced is approximately 25 minutes from the recommended hotels. Club Campestre Farallones is approximately
+                  35 minutes from the church. We will provide complimentary transportation to the wedding day events. We also recommend using Uber or local taxis if needed.</p>
                 <p className="eventTitle">Wedding Day Transportation</p>
                 <p className="eventDescription">
-                If you wish to drive yourself to and from the venues, parking will be available. You also have the option of using Uber or local taxis. We will also have complimentary transportation running to and from the venues from our recommended hotels.
+                  If you wish to drive yourself to and from the venues, parking will be available. You also have the option of using Uber or local taxis. We will also have complimentary transportation running to and from the venues from our recommended hotels.
                 </p>
                 <p className="eventDescription">We will have a complimentary bus running to and from the venue from our two recommended hotels.</p>
                 <p className="eventDescription"><b>Bus Schedule</b></p>
@@ -198,11 +198,9 @@ class Home extends React.Component {
               <Fade>
                 <p className="eventTitle">Where to Stay</p>
                 <p className="eventDescription">
-                  We are recommending two hotels for your stay. Both hotels are near the venue and both will
-                  have a bus to take to the venue.
+                  We are recommending two hotels for your stay. Both hotels are near the reception venue and both will have complimentary transportation.
                 </p>
-                <p className="eventDescription">If you are hoping to spend a lot of time in Cali during your stay, we recommend getting a different hotel for the
-                  other nights of your trip so that you don’t need to spend as much time driving back and forth.
+                <p className="eventDescription">If you are hoping to spend a lot of time in Cali during your stay, we also recommend the Intercontinental Hotel which is closer to the center of the city.
                   <br />
                   <div className="hotel">
                     <p className="eventDescription"><b>Hilton Garden Inn</b><br />
