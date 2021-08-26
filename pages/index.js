@@ -4,6 +4,7 @@ import React from 'react';
 var checkRender = false;
 var currentAnswer = null;
 
+/*
 function triggerAnimation() {
   if (checkRender && typeof document != "undefined") {
     document.getElementById("introimage").classList.toggle("show");
@@ -11,8 +12,9 @@ function triggerAnimation() {
   } else {
     checkRender = !checkRender;
   }
-  setTimeout(triggerAnimation, 5000);
+  setTimeout(triggerAnimation, 3000);
 }
+*/
 
 function Fade(props) {
   const [isVisible, setVisible] = React.useState(false);
@@ -93,7 +95,7 @@ class Home extends React.Component {
 
   render() {
 
-    triggerAnimation();
+    // triggerAnimation();
 
     return (
       <div className="container">
@@ -110,7 +112,7 @@ class Home extends React.Component {
         <main className="main-wrapper">
           <div className="introDiv">
             <video className="introVideo" id="introvideo" src="images/pop.mp4" autoPlay muted playsInline loop preload="auto"></video>
-            <img className="introImage show" id="introimage" src="images/paocamiloengaged.jpg"></img>
+            <img className="introImage" id="introimage" src="images/paocamiloengaged.jpg"></img>
             <div className="introOverlay"></div>
             <div className="introHeaderSection">
               <p className="introTitle">Paola &amp; Camilo</p>
@@ -166,12 +168,14 @@ class Home extends React.Component {
                 <p className="eventDescription">If you wish to drive there is also plenty of parking at the reception or you may use Uber or taxis.</p>
               </Fade>
             </div>
-            <div className="photoGallery" id="photogallery1">
-              <img className="photo" id="beach" src="images/beach.jpg"></img>
-              <img className="photo" id="colombia" src="images/colombia.jpg"></img>
-              <img className="photo" id="column" src="images/column.jpg"></img>
-              <img className="photo" id="london" src="images/london.jpg"></img>
-            </div>
+            <Fade>
+              <div className="photoGallery" id="photogallery1">
+                <img className="photo" id="beach" src="images/beach.jpg"></img>
+                <img className="photo" id="colombia" src="images/colombia.jpg"></img>
+                <img className="photo" id="column" src="images/column.jpg"></img>
+                <img className="photo" id="london" src="images/london.jpg"></img>
+              </div>
+            </Fade>
 
             <Fade>
               <div className="eventHeaderSection hotelSection">
@@ -227,12 +231,14 @@ class Home extends React.Component {
                 </p>
               </Fade>
             </div>
-            <div className="photoGallery" id="photogallery2">
-              <img className="photo" id="hall" src="images/hall.jpg"></img>
-              <img className="photo" src="images/puertorico.jpg"></img>
-              <img className="photo" id="roman" src="images/roman.jpg"></img>
-              <img className="photo" id="snow" src="images/snow.jpg"></img>
-            </div>
+            <Fade>
+              <div className="photoGallery" id="photogallery2">
+                <img className="photo" id="hall" src="images/hall.jpg"></img>
+                <img className="photo" src="images/football.jpeg"></img>
+                <img className="photo" id="roman" src="images/roman.jpg"></img>
+                <img className="photo" id="snow" src="images/snow.jpg"></img>
+              </div>
+            </Fade>
 
             <Fade>
               <div className="eventHeaderSection">
@@ -265,7 +271,8 @@ class Home extends React.Component {
                 <div class="answerDiv">
                   <p className="answer">We are hoping that the world will be a bit closer to normal by the time November comes around, but we will be closely following
                     recommended guidelines at our wedding. Even though it is not required, for the safety of our guests we recommend to get vaccinated. At the moment a PCR test is
-                    not required to enter Colombia but you do have to present a Check-Mig registration using the the following link: migracioncolombia.gov.co.</p>
+                    not required to enter Colombia but you do have to present a Check-Mig registration using the the following link: 
+                    <a className="answer covidLink" href="https://migracioncolombia.gov.co/" target="_blank" rel="noopener noreferrer"> Migración Colombia</a></p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(5)}>Where are you registered?</button>
                 <div class="answerDiv">
@@ -289,25 +296,29 @@ class Home extends React.Component {
                 </div>
               </Fade>
             </div>
-            <div className="photoGallery2">
-              <img className="photo2" id="ferris" src="images/ferris.jpg"></img>
-              <img className="photo2" id="train" src="images/train.jpg"></img>
-              <img className="photo2" id="mountain" src="images/mountain.jpg"></img>
-            </div>
+            <Fade>
+              <div className="photoGallery2">
+                <img className="photo2" id="ferris" src="images/ferris.jpg"></img>
+                <img className="photo2" id="train" src="images/train.jpg"></img>
+                <img className="photo2" id="mountain" src="images/mountain.jpg"></img>
+              </div>
+            </Fade>
           </div>
 
-          <div className="footer">
-            <img className="footerBackground" src="images/champagne.png"></img>
-            <p className="details">
-              November 27, 2021<br />
-              Iglesia La Merced<br />
-              4:00PM
-            </p>
-            <div className="footerRSVP">
-              <p className="rsvpText">Let us know if you can make it!</p>
-              <button className="rsvpButton2">RSVP</button>
+          <Fade>
+            <div className="footer">
+              <img className="footerBackground" src="images/champagne.png"></img>
+              <p className="details">
+                November 27, 2021<br />
+                Iglesia La Merced<br />
+                4:00PM
+              </p>
+              <div className="footerRSVP">
+                <p className="rsvpText">Let us know if you can make it!</p>
+                <button className="rsvpButton2">RSVP</button>
+              </div>
             </div>
-          </div>
+          </Fade>
         </main>
 
         <div className="fullScreenShadow" id="fullscreenshadow"></div>

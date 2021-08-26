@@ -8,19 +8,13 @@
     #photogallery2 {
         margin-top:150px;
     }
-
-    .arrowBox {
-        right:90vw; 
-    }
-    .arrowBox:nth-child(9) {
-        left:90vw;
-    }
-    .fullScreenImage {
-        max-width:70%;
-    }
 }
 
 @media only screen and (max-width: 1680px) {
+    #faqHeader {
+        margin-top:400px;
+    }
+
     .photo {
         margin:0 20px;
     }
@@ -30,45 +24,27 @@
     .events {
         width:35%;
     }
-    
-    .arrowBox {
-        right:91vw; 
-    }
-    .arrowBox:nth-child(9) {
-        left:91vw;
-    }
-    .fullScreenImage {
-        max-width:80%;
-    }
 }
 
 @media only screen and (max-width: 1390px) {
     .photo {
-        margin:0 16px;
+        margin:0 12px;
     }
     .photo2 {
-        margin:0 20px;
-    }
-    #photogallery2 {
-        margin-top:80px;
+        margin:0 10px;
     }
     .events {
         width:41%;
     }
 
-    .arrowBox {
-        right:86vw;
-        top:auto;
-        bottom:2rem;
-        transform:rotateZ(45deg);
-        background-color:rgba(0, 0, 0, 0.787);
+    .photoGallery {
+        margin-top: 150px;
     }
-    .arrowBox:nth-child(9) {
-        left:86vw;
-        transform:rotateZ(225deg);
+    #photogallery2 {
+        margin-top:80px;
     }
-    .fullScreenImage {
-        max-width:100%;
+    #faqHeader {
+        margin-top:0px;
     }
 }
 
@@ -102,102 +78,29 @@
         height:45px; width:150px;
         font-size: 20px;
     }
-    .rsvpButton2 {
-        height:55px; width:170px;
-    }
 
     .eventHeaderSection {
-        margin:0 0 30px 0;
-    }
-    .eventHeader {
-        font-size:100px;
-        margin-top:80px;
-    }
-    .events {
-        width:87%;
-        margin:0 20px;
-        padding-bottom:0;
-    }
-    .eventTitle {
-        font-size:32px;
-    }
-    .eventDescription {
-        line-height:40px;
-        font-size:21px;
+        margin-top:100px;
     }
 
-    .photoGallery, .photoGallery2 {
-        position:relative;
-        margin-top:70px;
-        margin-bottom:100px;
-        height:100%; max-height:none;
-    }
-    .photoGallery2 {
-        margin-top:0px;
-    }
     #photogallery1 {
-        margin-bottom:30px;
+        margin-bottom:200px;
     }
-    #beach, #column, #london, #snow, #hall, #mountain, #roman, #train {
-        transform:none;
+    #photogallery2 {
+        margin-bottom:300px;
     }
     .photo {
-        margin:25px 0;
-        height:auto;
-        width:88%;
-        max-width:none;
+        margin:0 10px;
     }
     .photo2 {
-        margin:25px 0;
-        height:auto;
-        width: 88%;
-        max-width:none;
+        margin:0 6px;
     }
 
-    #faqHeader {
-        margin-top:0;
-    }
     .faqSection {
-        margin:60px 0 120px 0;
-        width:87%;
+        margin-bottom:120px;
     }
-    .question {
-        font-size:28px;
-        padding: 28px 40px 28px 35px;
-        height: auto; width: 100%;
-        letter-spacing:1px;
-        line-height:45px;
-    }
-    .question:before {
-        font-size: 31px;
-        transform:translateX(20px);
-    }
-    .question.active:before {
-        transform:translateX(20px) rotate(225deg);
-    }
-    .answer {
-        font-size:22px;
-    }
-
-    .footer {
-        font-size:30px;
-    }
-    .details {
-        display:block;
-        width:100%;
-        line-height:50px;
-    }
-    .footerRSVP {
-        padding:0 20px;
-        display:block;
-        width:100%;
-    }
-
-    .arrowBox {
-        right:84vw;
-    }
-    .arrowBox:nth-child(9) {
-        left:84vw;
+    .photoGallery2 {
+        margin-bottom:200px;
     }
 }
 
@@ -212,9 +115,105 @@
     .introDate {
         font-size:42px;
     }
+    .rsvpButton2 {
+        height:50px; width:140px;
+        font-size:19px;
+    }
+
+    .eventTitle {
+        font-size:21px;
+        margin:30px 0;
+    }
+    .eventDescription, .hotelDescription {
+        font-size:15px;
+        line-height:31px;
+        letter-spacing:0.5px;
+    }
+    .website {
+        margin-top:20px;
+    }
+    .events {
+        width:35%;
+        margin:0 30px;
+        padding-bottom:30px;
+    }
+
+    #beach {
+        transform:translateY(-38%);
+    }
+    #column {
+        transform:translateY(-15%);
+    }
+    #london {
+        transform:translateY(17%);
+    }
+    #hall {
+        transform:translateY(45%);
+    }
+    #roman {
+        transform:translateY(33%);
+    }
+    #snow {
+        transform:translateY(23%);
+    }
+    #train {
+        transform:translateY(40%);
+    }
+    #mountain {
+        transform:translateY(20%);
+    }
+
+    .hotel {
+        margin-top:20px;
+    }
+    .location {
+        margin-top:-18px;
+    }
+    .hotel:nth-child(3), .location:nth-child(3) {
+        margin-left:20px;
+    }
+
+    .faqSection {
+        margin:60px 0 120px 0;
+        width:70%;
+    }
+    .question {
+        font-size:20px;
+        padding: 15px 40px 15px 15px;
+        height: auto; width: 100%;
+        letter-spacing:1px;
+        line-height:35px;
+    }
+    .question:before {
+        font-size: 20px;
+        transform:translateX(35px);
+        line-height:170%;
+    }
+    .question.active:before {
+        transform:translateX(35px) rotate(225deg);
+    }
+    .answerDiv {
+        padding:0 0 0 15px;
+    }
+    .answerDiv.active {
+        padding:5px 0 5px 15px;
+        margin-bottom:10px;
+    }
+    .answer {
+        font-size:15px;
+        line-height:35px;
+    }
+
+    .footer {
+        font-size:20px;
+    }
+    .details, .footerRSVP {
+        line-height:40px;
+        letter-spacing:0.5px;
+    }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 860px) {
     .introTitle {
         font-size:80px;
         padding: 0 10px;
@@ -235,73 +234,80 @@
         text-shadow:none;
     }
 
+    .hotel, .location {
+        width:100%;
+    }
+    .hotel:nth-child(3), .location:nth-child(3) {
+        margin-left:0px;
+    }
+    .location:nth-child(3) {
+        margin-top:10px;
+        margin-bottom:25px;
+    }
+
+    #photogallery2 {
+        margin-top:60px;
+        margin-bottom:260px;
+    }
+
+    .faqSection {
+        margin-bottom:100px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .rsvpButton2 {
+        height:45px; width:130px;
+        font-size:17px;
+    }
+
     .eventHeaderSection {
-        margin:0 0 10px 0;
+        padding: 0 10px;
+        margin:0;
     }
     .eventHeader {
-        font-size:75px;
+        font-size:70px;
+        margin-top:70px;
     }
-    .eventHeaderImage {
-        transform:translate(0%, -50%) scale(1.4);
-    }
-    .eventSubHeader {
-        font-size:19px;
-        padding:0 40px;
-    }
-    .event {
-        width:35%;
-    }
-
-    .faqSection {
-        margin:60px 0 90px 0;
+    .events {
         width:87%;
+        margin:0 20px;
+        padding-bottom:0;
     }
 
-    .arrowBox {
-        right:85vw;
-        width:80px; height:80px;
+    .photoGallery, .photoGallery2 {
+        position:relative;
+        margin-top:70px;
+        margin-bottom:100px;
+        height:100%; max-height:none;
     }
-    .arrowBox:nth-child(9) {
-        left:85vw;
+    .photoGallery2 {
+        margin-top:0px;
+        margin-bottom:50px;
     }
-    .arrow {
-        width:30px;
-        height:30px;
-        top:50%; left:50%;
+    #photogallery1 {
+        margin-bottom:30px;
     }
-}
+    #photogallery2 {
+        margin-bottom:60px;
+    }
+    #beach, #column, #london, #snow, #hall, #mountain, #roman, #train {
+        transform:none;
+    }
+    .photo, .photo2 {
+        margin:15px 0;
+        height:auto;
+        width:88%;
+        max-width:none;
+    }
 
-@media only screen and (max-width: 690px) {
-    .eventHeaderSection {
-        padding: 0 20px;
+    #faqHeader {
+        font-size:60px;
+        margin-bottom:0;
     }
-
-    .footer {
-        font-size:26px;
-    }
-
-    .arrowBox {
-        width:65px;
-        height:65px;
-        right:84vw;
-    }
-    .arrowBox:nth-child(9) {
-        left:84vw;
-    }
-    .arrow {
-        width:20px;
-        height:20px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
     .faqSection {
-        margin:60px 0 70px 0;
-        width:90%;
-    }
-    .question {
-        font-size:28px;
-        padding: 28px 40px 28px 15px;
+        margin:45px 0 100px 0;
+        width:94%;
     }
     .question:before {
         transform:translateX(30px);
@@ -309,91 +315,37 @@
     .question.active:before {
         transform:translateX(30px) rotate(225deg);
     }
-    .answerDiv {
-        padding:0 0 0 15px;
-    }
-    .answerDiv.active {
-        padding:10px 0 20px 15px;
-    }
 
-    .arrowBox {
-        width:65px;
-        height:65px;
-        right:84vw;
+    .footer {
+        height:370px;
+        font-size:20px;
     }
-    .arrowBox:nth-child(9) {
-        left:84vw;
-    }
-    .arrow {
-        width:20px;
-        height:20px;
-    }
-}
-
-@media only screen and (max-width: 544px) {
-    .hotel, .location {
+    .details {
+        margin-top:0;
         display:block;
-        width:87%;
+        width:100%;
+        line-height:35px;
     }
-    .hotel:nth-child(3), .location:nth-child(3) {
-        margin-left:0px;
-        margin-top:40px;
-    }
-
-    .event {
-        width:70%;
+    .footerRSVP {
+        padding:0 20px;
+        display:block;
+        width:100%;
     }
 }
 
-@media only screen and (max-width: 455px) {
+@media only screen and (max-width: 500px) {
     .eventHeader {
-        font-size:65px;
-    }
-
-    .arrowBox {
-        right:80vw;
-        width:60px;
-        height:60px;
-    }
-    .arrowBox:nth-child(9) {
-        left:80vw;
-    }
-    .arrow {
-        width:20px;
-        height:20px;
-        top:50%; left:50%;
+        font-size:60px;
     }
 }
 
-@media only screen and (max-width: 360px) {
-    .arrowBox {
-        right:75vw;
-    }
-    .arrowBox:nth-child(9) {
-        left:75vw;
-    }
-}
+@media only screen and (max-width: 300px) {
+    .introDivider {
+        font-size: 14px;
+    } 
 
-@media only screen and (max-width: 314px) {
-    .arrowBox {
-        width:50px;
-        height:50px;
-        right:78vw;
-    }
-    .arrowBox:nth-child(9) {
-        left:78vw;
-    }
-    .arrow {
-        width:18px;
-        height:18px;
-    }
-}
-
-@media only screen and (max-width: 265px) {
-    .arrowBox {
-        right:74vw;
-    }
-    .arrowBox:nth-child(9) {
-        left:74vw;
+    .introDivider::before,
+    .introDivider::after {
+        min-width: 7vw;
     }
 }
