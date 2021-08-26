@@ -260,7 +260,7 @@ class Home extends React.Component {
                 <button className="question" onClick={e => triggerCollapse(2)}>What should I wear?</button>
                 <div class="answerDiv">
                   <p className="answer">The dress code is Black-Tie. Ladies must wear a floor length gown and gentlemen must wear a tuxedo. If you need any help here is a handy
-                    guide for black-tie attire.</p>
+                    guide for black-tie attire: <a className="answer covidLink" href="https://www.brides.com/story/black-tie-wedding-guest-dress-code-long-gowns" target="_blank" rel="noopener noreferrer">Black-Tie Guide</a></p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(3)}>What is the weather like?</button>
                 <div class="answerDiv">
