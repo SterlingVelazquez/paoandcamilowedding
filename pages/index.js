@@ -171,9 +171,9 @@ class Home extends React.Component {
             <Fade>
               <div className="photoGallery" id="photogallery1">
                 <img className="photo" id="beach" src="images/beach.jpg"></img>
-                <img className="photo" id="colombia" src="images/colombia.jpg"></img>
+                <img className="photo" id="colombia" src="images/football.jpeg"></img>
                 <img className="photo" id="column" src="images/column.jpg"></img>
-                <img className="photo" id="london" src="images/london.jpg"></img>
+                <img className="photo" id="london" src="images/snow.jpg"></img>
               </div>
             </Fade>
 
@@ -189,7 +189,7 @@ class Home extends React.Component {
                   35 minutes from the church. We will provide complimentary transportation to the wedding day events. We also recommend using Uber or local taxis if needed.</p>
                 <p className="eventTitle">Wedding Day Transportation</p>
                 <p className="eventDescription">
-                  If you wish to drive yourself to and from the venues, parking will be available. You also have the option of using Uber or local taxis. We will also have complimentary transportation running to and from the venues from our recommended hotels.
+                  If you wish to drive yourself to and from the venues, parking will be available. You also have the option of using Uber or local taxis.
                 </p>
                 <p className="eventDescription">We will have a complimentary bus running to and from the venue from our two recommended hotels.</p>
                 <p className="eventDescription"><b>Bus Schedule</b></p>
@@ -233,10 +233,10 @@ class Home extends React.Component {
             </div>
             <Fade>
               <div className="photoGallery" id="photogallery2">
-                <img className="photo" id="hall" src="images/hall.jpg"></img>
-                <img className="photo" src="images/football.jpeg"></img>
-                <img className="photo" id="roman" src="images/roman.jpg"></img>
-                <img className="photo" id="snow" src="images/snow.jpg"></img>
+                <img className="photo" id="hall" src="images/colombia.jpg"></img>
+                <img className="photo" src="images/hall.jpg"></img>
+                <img className="photo" id="roman" src="images/london.jpg"></img>
+                <img className="photo" id="snow" src="images/roman.jpg"></img>
               </div>
             </Fade>
 
