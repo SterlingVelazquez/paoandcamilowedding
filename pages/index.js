@@ -3,6 +3,7 @@ import React from 'react';
 
 var checkRender = false;
 var currentAnswer = null;
+var Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };
 
 /*
 function triggerAnimation() {
@@ -93,6 +94,89 @@ function expandSection(id) {
 
 class Home extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstName: '',
+      lastName: '',
+      note: '',
+      checked: 'checked'
+    }
+  }
+
+  toggleRSVP() {
+    document.getElementById("rsvpform").scrollTo({top:0});
+    document.getElementById("rsvpform").classList.toggle("show");
+    document.getElementById("fullscreenshadow").classList.toggle("show");
+  }
+  toggleSent() {
+    document.getElementById("rsvpform").scrollTo({top:0});
+    document.getElementById('rsvpcontainer').classList.toggle("hide");
+    document.getElementById("rsvpform").classList.toggle("submit");
+  }
+  closeRSVP() {
+    this.cancelForm();
+    document.getElementById('submitcontainer').classList.toggle("show");
+    setTimeout(() => {this.toggleSent()}, 500);
+  }
+  submitForm(e) {
+    e.preventDefault();
+    var name = this.state.firstName + " " + this.state.lastName;
+    var response = document.getElementById("accepted").checked ? "Accepted" : "Declined";
+    var guests = document.getElementById("rsvpguests").value;
+    if (response === "Declined") {
+      Email.send({ 
+        SecureToken: "8be73ead-f4db-4a68-aefa-45df4ba1284d", 
+        To: 'paolarabanal9@gmail.com', 
+        From: "paola@paoandcamilowedding.com", 
+        Subject: "Invite declined from " + this.state.firstName,
+        Body: "<html><p>Name: " + name + "</p></br><p>Notes: " + this.state.note + "</p></br></br></html>", 
+      }).then(function () { })
+      document.getElementById("sentsubheader").innerHTML = "We're sorry you couldn't make it! Thank you for letting us know."
+    } else {
+      Email.send({ 
+        SecureToken: "8be73ead-f4db-4a68-aefa-45df4ba1284d", 
+        To: 'paolarabanal9@gmail.com', 
+        From: "paola@paoandcamilowedding.com", 
+        Subject: "Invite accepted from " + this.state.firstName,
+        Body: "<html><p>Name: " + name + "</p></br><p>Number of Guests: " + guests + "</p></br><p>Notes: " + this.state.note + "</p></br></br></html>", 
+      }).then(function () {})
+      document.getElementById("sentsubheader").innerHTML = "Thank you! You will also receive calls from our wedding planner for confirmation."
+    }
+    document.getElementById('submitcontainer').classList.toggle("show");
+    this.toggleSent();
+  }
+  cancelForm() {
+    this.toggleRSVP();
+    this.setState({checked: "checked"});
+    document.getElementById("rsvpform").reset();
+  }
+// 08D706D0F07B1C3CA8E5569FE286D5C3C7FC
+  onCheck() {
+    this.setState({ checked: !this.state.checked });
+  }
+
+  setFirstName(e) {
+    var name = e.target.value;
+    this.setState({ firstName: name });
+  }
+  setLastName(e) {
+    var name = e.target.value;
+    this.setState({ lastName: name });
+  }
+  changeGuests(input) {
+    var guests = parseInt(document.getElementById("rsvpguests").value);
+    if (guests > 1 && input === -1)
+      guests -= 1;
+    else if (guests < 10 && input === 1)
+      guests += 1;
+    document.getElementById("rsvpguests").value = guests;
+  }
+  setNote(e) {
+    var note = e.target.value;
+    this.setState({ note: note });
+  }
+
   render() {
 
     // triggerAnimation();
@@ -103,7 +187,7 @@ class Home extends React.Component {
           <title>Pao and Camilo's Wedding</title>
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
           <link href="https://fonts.googleapis.com/css2?family=Alice&family=Mulish:wght@200;300&display=swap" rel="stylesheet"></link>
           <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet"></link>
           <link href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet"></link>
@@ -118,7 +202,7 @@ class Home extends React.Component {
               <p className="introTitle">Paola &amp; Camilo</p>
               <div className="introDivider">SAVE THE DATE</div>
               <p className="introDate">November 27, 2021</p>
-              <button className="rsvpButton">RSVP</button>
+              <button className="rsvpButton" onClick={() => this.toggleRSVP()}>RSVP</button>
             </div>
             <div className="introFade"></div>
           </div>
@@ -133,7 +217,7 @@ class Home extends React.Component {
               <Fade>
                 <p className="eventTitle">RSVP</p>
                 <p className="eventDescription"> Please let us know if you can make it by November 1, 2021. We can’t wait to see you!</p>
-                <button className="rsvpButton2 website">RSVP</button>
+                <button className="rsvpButton2 website" onClick={() => this.toggleRSVP()}>RSVP</button>
                 <p className="eventTitle">Schedule</p>
                 <p className="eventDescription">2:30 p.m. Shuttle from hotels begin</p>
                 <p className="eventDescription">4:00 p.m. Ceremony</p>
@@ -248,50 +332,50 @@ class Home extends React.Component {
             <div className="faqSection">
               <Fade>
                 <button className="question" onClick={e => triggerCollapse(0)}>Where is the venue? Is it close to Cali?</button>
-                <div class="answerDiv">
+                <div className="answerDiv">
                   <p className="answer">Both venues, the church ceremony and the reception are located in Cali, Colombia. The Church Ceremony en La Inglesia la Merced is
                     located approximately 30 minutes from the recommended hotels and the reception in Club Campestre Farallones is approximately 17 minutes from the recommended
                     hotels. If you are hoping to spend more time and explore the city, we also recommend to stay in the Intercontinental Hotel.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(1)}>What time is the ceremony?</button>
-                <div class="answerDiv">
+                <div className="answerDiv">
                   <p className="answer">The church ceremony is at 4:00 pm and the reception will start at 6:00pm.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(2)}>What should I wear?</button>
-                <div class="answerDiv">
+                <div className="answerDiv">
                   <p className="answer">The dress code is Black-Tie. Ladies must wear a floor length gown and gentlemen must wear a tuxedo. If you need any help here is a handy
                     guide for black-tie attire: <a className="answer covidLink" href="https://www.brides.com/story/black-tie-wedding-guest-dress-code-long-gowns" target="_blank" rel="noopener noreferrer">Black-Tie Guide</a></p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(3)}>What is the weather like?</button>
-                <div class="answerDiv">
+                <div className="answerDiv">
                   <p className="answer">The weather in Cali in November is on average 83 Deg F during the day and can go as low as 65 Deg F at night, due to its location in the
                     mountains. The reception will be indoors but the area will not be air conditioned since it’s an open space with cool temperature.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(4)}>What about Covid?</button>
-                <div class="answerDiv">
+                <div className="answerDiv">
                   <p className="answer">We are hoping that the world will be a bit closer to normal by the time November comes around, but we will be closely following
                     recommended guidelines at our wedding. Even though it is not required, for the safety of our guests we recommend to get vaccinated. At the moment a PCR test is
-                    not required to enter Colombia but you do have to present a Check-Mig registration using the the following link: 
+                    not required to enter Colombia but you do have to present a Check-Mig registration using the the following link:
                     <a className="answer covidLink" href="https://migracioncolombia.gov.co/" target="_blank" rel="noopener noreferrer"> Migración Colombia</a></p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(5)}>Where are you registered?</button>
-                <div class="answerDiv">
+                <div className="answerDiv">
                   <p className="answer">We are not registered, your presence at our wedding is the greatest gift of all. If it is your wish to  bless us with a gift, we would
                     greatly appreciate your contribution to our honeymoon fund.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(6)}>Is there parking at the venue?</button>
-                <div class="answerDiv">
+                <div className="answerDiv">
                   <p className="answer">The parking at the church can be a little tricky but there is plenty of parking at the reception. We do recommend to take advantage of
                     our complimentary transportation from the recommended hotels. You may also use Uber or taxis.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(7)}>Can we bring our kids?</button>
-                <div class="answerDiv">
+                <div className="answerDiv">
                   <p className="answer">We love your kids, but this is an adults only wedding.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(8)}>How do I RSVP?</button>
-                <div class="answerDiv">
+                <div className="answerDiv">
                   <p className="answer" style={{ marginBottom: "0px" }}>You can RSVP here:</p>
-                  <button className="rsvpButton2 website">RSVP</button>
+                  <button className="rsvpButton2 website" onClick={() => this.toggleRSVP()}>RSVP</button>
                   <p className="answer">You will also receive calls from our wedding planner for confirmation.</p>
                 </div>
               </Fade>
@@ -315,13 +399,45 @@ class Home extends React.Component {
               </p>
               <div className="footerRSVP">
                 <p className="rsvpText">Let us know if you can make it!</p>
-                <button className="rsvpButton2">RSVP</button>
+                <button className="rsvpButton2" onClick={() => this.toggleRSVP()}>RSVP</button>
               </div>
             </div>
           </Fade>
         </main>
 
         <div className="fullScreenShadow" id="fullscreenshadow"></div>
+
+        <form className="rsvpForm" id="rsvpform" onSubmit={e => this.submitForm(e)}>
+          <div className="rsvpContainer" id="rsvpcontainer">
+            <p className="rsvpHeader">RSVP</p>
+            <p className="rsvpSubheader">Kindly reply <br />by November 1st</p>
+            <input className="rsvpInput" id="rsvpfirst" defaultValue="" placeholder="First Name *" onInput={e => this.setFirstName(e)} required></input>
+            <input className="rsvpInput" id="rsvplast" defaultValue="" placeholder="Last Name *" onInput={e => this.setLastName(e)} required></input>
+            <br />
+            <p className="rsvpInviteHeader">Invitation Response</p>
+            <label className="rsvpInvite" id="accept">Accept
+              <input type="radio" checked={this.state.checked} name="radio" onChange={() => this.onCheck()} id="accepted"></input>
+              <span className="checkmark"></span>
+            </label>
+            <label className="rsvpInvite" id="decline">Decline
+              <input type="radio" name="radio" onChange={() => this.onCheck()} checked={!this.state.checked}></input>
+              <span className="checkmark"></span>
+            </label>
+            <br />
+            <p className="rsvpGuests">Number of Guests</p>
+            <p className="rsvpSign" id="minus" onClick={() => this.changeGuests(-1)}>-</p>
+            <input className="rsvpInput" id="rsvpguests" defaultValue={1}></input>
+            <p className="rsvpSign" id="plus" onClick={() => this.changeGuests(1)}>+</p>
+            <textarea className="rsvpNote" id="rsvpnote" defaultValue="" onInput={e => this.setNote(e)} placeholder="Optional Notes (Dietary restrictions, requests, or send us a message!)"></textarea>
+            <button type="button" className="cancelButton" id="cancelbutton" onClick={e => this.cancelForm()}>Cancel</button>
+            <button type="submit" className="submitButton" id="submitbutton">Submit</button>
+          </div>
+          <div className="submitContainer" id="submitcontainer">
+            <p className="sentHeader">RSVP Sent</p>
+            <p className="sentSubheader" id="sentsubheader"></p>
+            <button type="button" className="closeButton" onClick={() => this.closeRSVP()}>Close</button>
+          </div>
+        </form>
 
       </div >
     )

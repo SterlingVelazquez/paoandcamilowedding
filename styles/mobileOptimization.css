@@ -46,6 +46,10 @@
     #faqHeader {
         margin-top:0px;
     }
+
+    .rsvpForm {
+        transform:translate(-50%, -50%) scale(0.9) translateZ(0) perspective(1px) ;
+    }
 }
 
 @media only screen and (max-width: 1248px) {
@@ -253,6 +257,10 @@
     .faqSection {
         margin-bottom:100px;
     }
+
+    .rsvpForm {
+        transform:translate(-50%, -50%) scale(0.8) translateZ(0) perspective(1px) ;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -337,6 +345,11 @@
     .eventHeader {
         font-size:60px;
     }
+
+    .rsvpForm {
+        transform:translate(-50%, -50%) scale(1) translateZ(0) perspective(1px) ;
+        zoom:62%;
+    }
 }
 
 @media only screen and (max-width: 300px) {
@@ -347,5 +360,10 @@
     .introDivider::before,
     .introDivider::after {
         min-width: 7vw;
+    }
+
+    .rsvpForm {
+        transform:translate(-50%, -50%) scale(1) translateZ(0) perspective(0px);
+        zoom:52%;
     }
 }

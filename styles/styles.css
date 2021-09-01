@@ -14,7 +14,6 @@
     top:0%; left:50%;
     opacity:1;
     transform: translate(-50%, 0%);
-    transition:1s;
 }
 .introImage {
     object-position:top;
@@ -120,6 +119,7 @@
     height:40px;
     background:linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 70%, white 100%);
     bottom:0;
+    pointer-events:none;
 }
 
 .eventDiv {
@@ -340,6 +340,286 @@
 .fade-in-section.is-visible {
     opacity: 1;
     visibility: visible;
+}
+
+.fullScreenShadow {
+    position:fixed;
+    top:0; left:0;
+    height:100%; width:100%;
+    background:black;
+    opacity:0;
+    pointer-events:none;
+    transition:0.5s ease-in-out;
+}
+.fullScreenShadow.show {
+    opacity:0.5;
+    pointer-events:all;
+}
+
+.rsvpForm {
+    position:fixed;
+    text-align:center;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%) translateZ(0) perspective(1px) ;
+    height:100%; max-height:775px;
+    width:575px;
+    overflow-y:auto;
+    background:white;
+    border-radius:0.5%;
+    box-shadow:0 0 40px rgb(0, 0, 0);
+    opacity:0;
+    pointer-events:none;
+    transition:0.5s ease-in-out;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+.rsvpForm.show {
+    opacity:1;
+    pointer-events:all;
+}
+.rsvpForm.submit {
+    height:300px;
+    overflow:hidden;
+}
+.rsvpContainer {
+    opacity:1;
+    transition:0.5s;
+}
+.rsvpContainer.hide {
+    pointer-events:none;
+    opacity:0;
+}
+.rsvpHeader {
+    position:relative;
+    display:inline-block;
+    width:100%;
+    font-size:70px;
+    font-family: 'Alice', 'serif';
+    letter-spacing:4px;
+    margin:0;
+    color:rgb(129, 157, 128);
+    padding:8% 0 1% 0;
+}
+.rsvpSubheader {
+    position:relative;
+    display:inline-block;
+    width:100%;
+    font-size:25px;
+    font-family: 'Alice', 'serif';
+    letter-spacing:5px;
+    line-height:40px;
+    margin:0;
+    color:rgb(129, 157, 128);
+    padding-bottom:10%;
+}
+.rsvpDivider {
+    display:inline-block;
+    width:150px; height:auto;
+    margin:0 30px;
+    filter: invert(50%) sepia(40%) saturate(200%) hue-rotate(70deg);
+    opacity:0.7;
+}
+.rsvpDivider:nth-child(3) {
+    transform:scaleX(-1);
+}
+.rsvpInput {
+    display:inline-block;
+    margin:0px 20px;
+    width:37%;
+    border:none;
+    border-bottom:thin solid rgb(206, 206, 206);
+    font-size:22px;
+    font-family: 'Alice', 'serif';
+    letter-spacing:2px;
+    outline:none;
+    color:rgb(128, 128, 128);
+}
+.rsvpInput::placeholder {
+    color:rgb(155, 155, 155);
+    letter-spacing:1px;
+}
+.rsvpInviteHeader {
+    position:relative;
+    display:inline-block;
+    width:100%;
+    font-size:25px;
+    font-family: 'Alice', 'serif';
+    letter-spacing:5px;
+    line-height:30px;
+    margin-top:60px;
+    color:rgb(129, 157, 128);
+}
+.rsvpInvite {
+    display: inline-block;
+    position: relative;
+    padding: 0 6%;
+    margin: 0px 55px 15px 55px;
+    cursor: pointer;
+    font-size: 22px;
+    letter-spacing:2px;
+    color:rgb(122, 126, 122);
+    font-family: 'Alice', 'serif';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#accept {
+    transform:translateX(35px);
+}
+.rsvpInvite input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    transition:0.2s;
+}
+.rsvpInvite:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.rsvpInvite input:checked ~ .checkmark {
+    background-color: rgb(129, 157, 128);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.rsvpInvite input:checked ~ .checkmark:after {
+    display: block;
+}
+.rsvpInvite .checkmark:after {
+    top: 7px;
+    left: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+}
+.rsvpGuests {
+    display:inline-block;
+    font-size: 22px;
+    letter-spacing:2px;
+    color:rgb(129, 157, 128);
+    font-family: 'Alice', 'serif';
+    padding-right:50px;
+}
+.rsvpSign {
+    display:inline-block;
+    font-size:26px;
+    font-family: 'Mulish', sans-serif;
+    color:rgb(170, 170, 170);
+    cursor:pointer;
+    padding:20px;
+    transition:0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.rsvpSign:hover {
+    transform:scale(1.3);
+}
+#rsvpguests {
+    display:inline-block;
+    text-align:center;
+    font-family: 'Alice', 'serif';
+    width:40px;
+    border:none;
+    pointer-events:none;
+    font-size:24px;
+    margin:0;
+}
+.rsvpNote {
+    display:block;
+    margin:10px 0 0 50%;
+    transform:translateX(-50%);
+    width:70%; height:80px;
+    border:thin solid rgb(206, 206, 206);
+    resize:none;
+    font-family: 'Alice', 'serif';
+    font-size:18px;
+    letter-spacing:1px;
+    padding:6px;
+    color:rgb(138, 138, 138);
+    outline:none;
+}
+.rsvpNote::placeholder {
+    color:rgb(155, 155, 155);
+}
+.submitButton, .cancelButton {
+    margin:35px 0 30px 0;
+    width:140px; height:40px;
+    font-family: 'Alice', 'serif';
+    font-size:23px;
+    letter-spacing:1px;
+    color:rgb(129, 157, 128);
+    background:none;
+    border:none;
+    cursor:pointer;
+    transition:0.2s;
+}
+.submitButton {
+    margin-left:110px;
+}
+.cancelButton {
+    margin-right:110px;
+}
+.submitButton:hover, .cancelButton:hover {
+    transform:scale(1.1);
+}
+
+.submitContainer {
+    position:absolute;
+    padding:0 40px;
+    top:0;
+    opacity: 0;
+    pointer-events:none;
+    transition:0.5s ease-in-out 0.4s;
+}
+.submitContainer.show {
+    pointer-events:all;
+    opacity:1;
+}
+.sentHeader {
+    width:100%;
+    font-size:60px;
+    font-family: 'Alice', 'serif';
+    letter-spacing:4px;
+    color:rgb(129, 157, 128);
+    margin:30px 0 10px 0;
+}
+.sentSubheader {
+    width:100%;
+    font-size:22px;
+    font-family: 'Alice', 'serif';
+    letter-spacing:5px;
+    line-height:40px;
+    color:rgb(129, 157, 128);
+    margin:0;
+}
+.closeButton {
+    margin-top:15px;
+    width:140px; height:40px;
+    font-family: 'Alice', 'serif';
+    font-size:24px;
+    letter-spacing:1px;
+    color:rgb(151, 151, 151);
+    background:none;
+    border:none;
+    cursor:pointer;
+    transition:0.2s;
+}
+.closeButton:hover {
+    transform:scale(1.1);
 }
 
 @keyframes titleSlide {
