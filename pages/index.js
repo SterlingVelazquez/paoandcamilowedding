@@ -236,7 +236,7 @@ class Home extends React.Component {
                     Cra. 3 #6 - 62, Cali<br />
                     Valle del Cauca, Colombia
                   </p>
-                  <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps?q=Iglesia+La+Merced,+Cra.+3+%236+-+62,+Cali,+Valle+del+Cauca,+Colombia&ftid=0x8e30a664d7141a83:0x9dc96eb907465bd5&hl=en-US&gl=us&entry=gps&shorturl=1">Open in Google Maps</a>
+                  <a className="eventDescription mapLink" id="map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps?q=Iglesia+La+Merced,+Cra.+3+%236+-+62,+Cali,+Valle+del+Cauca,+Colombia&ftid=0x8e30a664d7141a83:0x9dc96eb907465bd5&hl=en-US&gl=us&entry=gps&shorturl=1">Open in Google Maps</a>
                 </div>
                 <div className="location">
                   <p className="eventDescription"><b>Reception</b><br /></p>
@@ -298,7 +298,9 @@ class Home extends React.Component {
                       Cl. 15a #100 21, Cali<br />
                       Valle del Cauca, Colombia
                     </p>
-                    <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/mVEy4BbeqkemzkV98">Open in Google Maps</a><br />
+                    <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/mVEy4BbeqkemzkV98">Open in Google Maps</a><br/>
+                    <a className="eventDescription reservationLink" target="_blank" rel="noopener noreferrer" href="https://secure3.hilton.com/en_US/GI/reservation/book.htm?inputModule=HOTEL&ctyhocn=CLOCCGI&arrival=20211125&departure=20211126&datesFlex=true&stop_mobi=yes&spec_plan=GRPBOD">Make A Reservation</a>
+                    <p className="footnote">*Be sure to use a card that does not have international fees</p>
                     <button className="rsvpButton2 website"><a target="_blank" rel="noopener noreferrer" href="https://www.hilton.com/en/hotels/cloccgi-hilton-garden-inn-cali-ciudad-jardin/?SEO_id=GMB-GI-CLOCCGI&y_source=1_MTkzOTkzNzMtNzE1LWxvY2F0aW9uLmdvb2dsZV93ZWJzaXRlX292ZXJyaWRl">Website</a></button>
                   </div>
                   <div className="hotel">

@@ -173,9 +173,18 @@
 .hotel:nth-child(3), .location:nth-child(3) {
     margin-left:30px;
 }
-.mapLink {
+.mapLink, .reservationLink {
     color:rgb(129, 157, 128);
     cursor:pointer;
+}
+.reservationLink {
+    line-height:60px;
+}
+.footnote {
+    margin:-5px 0 0 0;
+    line-height: 25px;
+    color:rgb(168, 168, 168);
+    font-size: 14px;
 }
 .website {
     margin-top:20px;

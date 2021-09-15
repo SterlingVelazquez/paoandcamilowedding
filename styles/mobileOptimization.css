@@ -141,6 +141,12 @@
         margin:0 30px;
         padding-bottom:30px;
     }
+    .reservationLink {
+        line-height:40px;
+    }
+    .footnote {
+        margin:5px 0 0 0;
+    }
 
     #beach {
         transform:translateY(-38%);
