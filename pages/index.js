@@ -299,9 +299,10 @@ class Home extends React.Component {
                       Valle del Cauca, Colombia
                     </p>
                     <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/mVEy4BbeqkemzkV98">Open in Google Maps</a><br/>
-                    <a className="eventDescription reservationLink" target="_blank" rel="noopener noreferrer" href="https://secure3.hilton.com/en_US/GI/reservation/book.htm?inputModule=HOTEL&ctyhocn=CLOCCGI&arrival=20211125&departure=20211126&datesFlex=true&stop_mobi=yes&spec_plan=GRPBOD">Make A Reservation</a>
+                    <a className="eventDescription websiteLink" target="_blank" rel="noopener noreferrer" href="https://www.hilton.com/en/hotels/cloccgi-hilton-garden-inn-cali-ciudad-jardin/?SEO_id=GMB-GI-CLOCCGI&y_source=1_MTkzOTkzNzMtNzE1LWxvY2F0aW9uLmdvb2dsZV93ZWJzaXRlX292ZXJyaWRl">Go to Hotel Website</a>
+                    <br/>
+                    <button className="rsvpButton2 reservation"><a target="_blank" rel="noopener noreferrer" href="https://secure3.hilton.com/en_US/GI/reservation/book.htm?inputModule=HOTEL&ctyhocn=CLOCCGI&arrival=20211125&departure=20211126&datesFlex=true&stop_mobi=yes&spec_plan=GRPBOD">Reservations</a></button>
                     <p className="footnote">*Be sure to use a card that does not have international fees</p>
-                    <button className="rsvpButton2 website"><a target="_blank" rel="noopener noreferrer" href="https://www.hilton.com/en/hotels/cloccgi-hilton-garden-inn-cali-ciudad-jardin/?SEO_id=GMB-GI-CLOCCGI&y_source=1_MTkzOTkzNzMtNzE1LWxvY2F0aW9uLmdvb2dsZV93ZWJzaXRlX292ZXJyaWRl">Website</a></button>
                   </div>
                   <div className="hotel">
                     <p className="eventDescription"><b>Hotel MS Ciudad Jardín Plus</b><br />
@@ -312,7 +313,7 @@ class Home extends React.Component {
                       Valle del Cauca, Colombia
                     </p>
                     <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/ctkT5Q2doREXithN7">Open in Google Maps</a><br />
-                    <button className="rsvpButton2 website"><a target="_blank" rel="noopener noreferrer" href="https://hotelesms.com/ms-ciudad-jardin/">Website</a></button>
+                    <a className="eventDescription websiteLink" target="_blank" rel="noopener noreferrer" href="https://hotelesms.com/ms-ciudad-jardin/">Go to Hotel Website</a>
                   </div>
                 </p>
               </Fade>

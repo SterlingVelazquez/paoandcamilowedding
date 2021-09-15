@@ -104,7 +104,7 @@
     transition:0.3s;
 }
 .rsvpButton:hover, .rsvpButton2:hover {
-    transform:scale(1.1);
+    transform:scale(1.05);
 }
 .rsvpButton2 {
     height:50px; width:140px;
@@ -173,18 +173,22 @@
 .hotel:nth-child(3), .location:nth-child(3) {
     margin-left:30px;
 }
-.mapLink, .reservationLink {
+.mapLink, .websiteLink {
     color:rgb(129, 157, 128);
     cursor:pointer;
 }
-.reservationLink {
+.websiteLink {
     position:relative;
-    top:30px;
-    font-size: 26px;
+    top:10px;
     padding-right:50px;
 }
+.reservation {
+    margin-top:30px;
+    width:180px;
+    letter-spacing:3px;
+}
 .footnote {
-    margin:38px 0 0 0;
+    margin-top:0;
     line-height: 25px;
     color:rgb(168, 168, 168);
     font-size: 14px;

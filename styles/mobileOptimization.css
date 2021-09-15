@@ -141,12 +141,11 @@
         margin:0 30px;
         padding-bottom:30px;
     }
-    .reservationLink {
-        top:30px;
-        font-size: 24px;
-    }
-    .footnote {
-        margin:38px 0 0 0;
+    .rsvpButton2.reservation {
+        margin-top:30px;
+        width:160px;
+        letter-spacing:3px;
+        font-size:17px;
     }
 
     #beach {
@@ -180,7 +179,13 @@
     .location {
         margin-top:-18px;
     }
-    .hotel:nth-child(3), .location:nth-child(3) {
+    .hotel {
+        width:100%;
+    }
+    .hotel:nth-child(3) {
+        margin-left:0px;
+    }
+    .location:nth-child(3) {
         margin-left:20px;
     }
 
@@ -245,10 +250,10 @@
         text-shadow:none;
     }
 
-    .hotel, .location {
+    .location {
         width:100%;
     }
-    .hotel:nth-child(3), .location:nth-child(3) {
+    .location:nth-child(3) {
         margin-left:0px;
     }
     .location:nth-child(3) {
