@@ -178,10 +178,13 @@
     cursor:pointer;
 }
 .reservationLink {
-    line-height:60px;
+    position:relative;
+    top:30px;
+    font-size: 26px;
+    padding-right:50px;
 }
 .footnote {
-    margin:-5px 0 0 0;
+    margin:38px 0 0 0;
     line-height: 25px;
     color:rgb(168, 168, 168);
     font-size: 14px;
