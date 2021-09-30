@@ -278,7 +278,7 @@ class Home extends React.Component {
                 <p className="eventDescription">We will have a complimentary bus running to and from the venue from our two recommended hotels.</p>
                 <p className="eventDescription"><b>Bus Schedule</b></p>
                 <p className="eventDescription">2:30pm - Departure from Hilton Garden Inn</p>
-                <p className="eventDescription">3:00pm - Departure from Hotel MS Ciudad</p>
+                <p className="eventDescription">3:00pm - Departure from Cali Marriott Hotel</p>
                 <p className="eventDescription">1:00-4:00am - Multiple return trips to hotels</p>
               </Fade>
             </div>
@@ -292,7 +292,7 @@ class Home extends React.Component {
                   <br />
                   <div className="hotel">
                     <p className="eventDescription"><b>Hilton Garden Inn</b><br />
-                      Average Rate $60/night
+                      Average Rate $110/night
                     </p>
                     <p className="eventDescription">
                       Cl. 15a #100 21, Cali<br />
@@ -305,15 +305,15 @@ class Home extends React.Component {
                     <p className="footnote">*Be sure to use a card that does not have international fees</p>
                   </div>
                   <div className="hotel">
-                    <p className="eventDescription"><b>Hotel MS Ciudad Jardín Plus</b><br />
-                      Average Rate $50/night
+                    <p className="eventDescription"><b>Cali Marriott Hotel</b><br />
+                      Average Rate $200/night
                     </p>
                     <p className="eventDescription">
-                      Cra. 101 #15a-35, Cali<br />
+                      Av. 8 Nte. #No 10-18, Cali<br />
                       Valle del Cauca, Colombia
                     </p>
-                    <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/ctkT5Q2doREXithN7">Open in Google Maps</a><br />
-                    <a className="eventDescription websiteLink" target="_blank" rel="noopener noreferrer" href="https://hotelesms.com/ms-ciudad-jardin/">Go to Hotel Website</a>
+                    <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/UdfhhS7cjNVSnjQf9">Open in Google Maps</a><br />
+                    <a className="eventDescription websiteLink" target="_blank" rel="noopener noreferrer" href="https://www.marriott.com/hotels/travel/clomc-cali-marriott-hotel/">Go to Hotel Website</a>
                   </div>
                 </p>
               </Fade>
