@@ -1,55 +1,11 @@
 import Head from 'next/head'
 import React from 'react';
+import Fade from '../tools/fade.js'
+import Hotel from '../tools/hotel.js'
 
 var checkRender = false;
 var currentAnswer = null;
 var Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };
-
-/*
-function triggerAnimation() {
-  if (checkRender && typeof document != "undefined") {
-    document.getElementById("introimage").classList.toggle("show");
-    document.getElementById("introvideo").classList.toggle("show");
-  } else {
-    checkRender = !checkRender;
-  }
-  setTimeout(triggerAnimation, 3000);
-}
-*/
-
-function Fade(props) {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-  }, []);
-  return (
-    <div className={`fade-in-section ${isVisible || (typeof domRef.current !== "undefined" &&
-      domRef.current.className.includes("is-visible")) ? 'is-visible' : ''}`} ref={domRef}>
-      {props.children}
-    </div>
-  );
-}
-
-function Pulse(props) {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-  }, []);
-  return (
-    <div className={`pulse-section ${isVisible || (typeof domRef.current !== "undefined" &&
-      domRef.current.className.includes("is-visible")) ? 'is-visible' : ''}`} ref={domRef}>
-      {props.children}
-    </div>
-  );
-}
 
 function triggerCollapse(id) {
   if (currentAnswer !== null) {
@@ -219,11 +175,13 @@ class Home extends React.Component {
                 <p className="eventDescription"> Please let us know if you can make it by November 1, 2021. We can’t wait to see you!</p>
                 <button className="rsvpButton2 website" onClick={() => this.toggleRSVP()}>RSVP</button>
                 <p className="eventTitle">Schedule</p>
-                <p className="eventDescription">2:30 p.m. Shuttle from hotels begin</p>
-                <p className="eventDescription">4:00 p.m. Ceremony</p>
+                <p className="eventDescription"><b>Friday, November 26th</b></p>
                 <p className="eventDescription">5:30 p.m. Cocktail Hour</p>
+                <p className="eventDescription"><b>Saturday, November 27th</b></p>
+                <p className="eventDescription">4:00 p.m. Ceremony</p>
                 <p className="eventDescription">6:00 - 3:00 a.m. Reception</p>
-                <p className="eventDescription">1:00 a.m. Shuttles begin leaving for hotels</p>
+                <p className="eventDescription"><b>Sunday, November 28th</b></p>
+                <p className="eventDescription">11:00 a.m. Brunch</p>
               </Fade>
             </div>
             <div className="events">
@@ -275,7 +233,7 @@ class Home extends React.Component {
                 <p className="eventDescription">
                   If you wish to drive yourself to and from the venues, parking will be available. You also have the option of using Uber or local taxis.
                 </p>
-                <p className="eventDescription">We will have a complimentary bus running to and from the venue from our two recommended hotels.</p>
+                <p className="eventDescription">We will have a complimentary bus running to and from the venue from two recommended hotels.</p>
                 <p className="eventDescription"><b>Bus Schedule</b></p>
                 <p className="eventDescription">2:30pm - Departure from Hilton Garden Inn</p>
                 <p className="eventDescription">3:00pm - Departure from Cali Marriott Hotel</p>
@@ -286,7 +244,7 @@ class Home extends React.Component {
               <Fade>
                 <p className="eventTitle">Where to Stay</p>
                 <p className="eventDescription">
-                  We are recommending two hotels for your stay. Both hotels are near the reception venue and both will have complimentary transportation.
+                  We are recommending six hotels for your stay. The Hilton Garden Inn is our most recommended as it is closest to the venue.
                 </p>
                 <p className="eventDescription">If you are hoping to spend a lot of time in Cali during your stay, we also recommend the Intercontinental Hotel which is closer to the center of the city.
                   <br />
@@ -305,15 +263,11 @@ class Home extends React.Component {
                     <p className="footnote">*Be sure to use a card that does not have international fees</p>
                   </div>
                   <div className="hotel">
-                    <p className="eventDescription"><b>Cali Marriott Hotel</b><br />
-                      Average Rate $200/night
-                    </p>
-                    <p className="eventDescription">
-                      Av. 8 Nte. #No 10-18, Cali<br />
-                      Valle del Cauca, Colombia
-                    </p>
-                    <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/UdfhhS7cjNVSnjQf9">Open in Google Maps</a><br />
-                    <a className="eventDescription websiteLink" target="_blank" rel="noopener noreferrer" href="https://www.marriott.com/hotels/travel/clomc-cali-marriott-hotel/">Go to Hotel Website</a>
+                    <Hotel name="Cali Marriot Hotel" link="https://www.marriott.com/hotels/travel/clomc-cali-marriott-hotel/" maps="https://goo.gl/maps/UdfhhS7cjNVSnjQf9"/>
+                    <Hotel name="Acqua Santa Lofts Hotel" link="http://www.acquasantahotel.com/inicio/" maps="https://goo.gl/maps/r9qttANd64pogjHG7"/>
+                    <Hotel name="Alko Hotel Casa Níspero" link="https://www.alkohoteles.com/" maps="https://goo.gl/maps/TP56pFhNSMA1k6pR9"/>
+                    <Hotel name="Hotel Pance 122" link="https://www.hotelpance122.com/" maps="https://goo.gl/maps/iBeDZeAvGLmPW79SA"/>
+                    <Hotel name="Hotel Intercontinental Cali" link="https://www.ihg.com/intercontinental/hotels/us/en/cali/cloha/hoteldetail?cm_mmc=GoogleMaps-_-IC-_-CO-_-CLOHA" maps="https://goo.gl/maps/sxfmr1FYdgBZpEiY7"/>
                   </div>
                 </p>
               </Fade>
@@ -336,7 +290,7 @@ class Home extends React.Component {
               <Fade>
                 <button className="question" onClick={e => triggerCollapse(0)}>Where is the venue? Is it close to Cali?</button>
                 <div className="answerDiv">
-                  <p className="answer">Both venues, the church ceremony and the reception are located in Cali, Colombia. The Church Ceremony en La Inglesia la Merced is
+                  <p className="answer">Both venues, the church ceremony and the reception are located in Cali, Colombia. The Church Ceremony in La Iglesia la Merced is
                     located approximately 30 minutes from the recommended hotels and the reception in Club Campestre Farallones is approximately 17 minutes from the recommended
                     hotels. If you are hoping to spend more time and explore the city, we also recommend to stay in the Intercontinental Hotel.</p>
                 </div>
@@ -351,7 +305,7 @@ class Home extends React.Component {
                 </div>
                 <button className="question" onClick={e => triggerCollapse(3)}>What is the weather like?</button>
                 <div className="answerDiv">
-                  <p className="answer">The weather in Cali in November is on average 83 Deg F during the day and can go as low as 65 Deg F at night, due to its location in the
+                  <p className="answer">The weather in Cali in November is on average 83°F during the day and can go as low as 65°F at night, due to its location in the
                     mountains. The reception will be indoors but the area will not be air conditioned since it’s an open space with cool temperature.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(4)}>What about Covid?</button>
@@ -448,3 +402,15 @@ class Home extends React.Component {
 }
 
 export default Home;
+
+/*
+function triggerAnimation() {
+  if (checkRender && typeof document != "undefined") {
+    document.getElementById("introimage").classList.toggle("show");
+    document.getElementById("introvideo").classList.toggle("show");
+  } else {
+    checkRender = !checkRender;
+  }
+  setTimeout(triggerAnimation, 3000);
+}
+*/
