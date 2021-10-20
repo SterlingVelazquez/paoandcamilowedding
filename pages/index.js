@@ -263,12 +263,12 @@ class Home extends React.Component {
                     <p className="footnote">You can also reserve by calling Luisa Fernanda at:<br/><a className="phoneNumber" href="tel:+573184487029">+57 318 4487029</a>.<br/>And be sure to use a card that does not have international fees!</p>
                   </div>
                   <div className="hotel">
+                    <Hotel name="Movich Casa del Alferez" link="https://www.movichhotels.com/es/hotel-casalferez-en-cali/?partner=5652&utm_source=google&utm_medium=gmb&utm_campaign=web_link" maps="https://goo.gl/maps/HCeNTkcvaedRDr3AA"/>
                     <Hotel name="Cali Marriot Hotel" link="https://www.marriott.com/hotels/travel/clomc-cali-marriott-hotel/" maps="https://goo.gl/maps/UdfhhS7cjNVSnjQf9"/>
                     <Hotel name="Acqua Santa Lofts Hotel" link="http://www.acquasantahotel.com/inicio/" maps="https://goo.gl/maps/r9qttANd64pogjHG7"/>
                     <Hotel name="Alko Hotel Casa Níspero" link="https://www.alkohoteles.com/" maps="https://goo.gl/maps/TP56pFhNSMA1k6pR9"/>
                     <Hotel name="Hotel Pance 122" link="https://www.hotelpance122.com/" maps="https://goo.gl/maps/iBeDZeAvGLmPW79SA"/>
                     <Hotel name="Hotel Intercontinental Cali" link="https://www.ihg.com/intercontinental/hotels/us/en/cali/cloha/hoteldetail?cm_mmc=GoogleMaps-_-IC-_-CO-_-CLOHA" maps="https://goo.gl/maps/sxfmr1FYdgBZpEiY7"/>
-                    <Hotel name="Movich Casa del Alferez" link="https://www.movichhotels.com/es/hotel-casalferez-en-cali/?partner=5652&utm_source=google&utm_medium=gmb&utm_campaign=web_link" maps="https://goo.gl/maps/HCeNTkcvaedRDr3AA"/>
                   </div>
                 </p>
               </Fade>
