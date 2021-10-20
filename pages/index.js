@@ -260,7 +260,7 @@ class Home extends React.Component {
                     <a className="eventDescription websiteLink" target="_blank" rel="noopener noreferrer" href="https://www.hilton.com/en/hotels/cloccgi-hilton-garden-inn-cali-ciudad-jardin/?SEO_id=GMB-GI-CLOCCGI&y_source=1_MTkzOTkzNzMtNzE1LWxvY2F0aW9uLmdvb2dsZV93ZWJzaXRlX292ZXJyaWRl">Go to Hotel Website</a>
                     <br/>
                     <button className="rsvpButton2 reservation"><a target="_blank" rel="noopener noreferrer" href="https://secure3.hilton.com/en_US/GI/reservation/book.htm?inputModule=HOTEL&ctyhocn=CLOCCGI&arrival=20211125&departure=20211126&datesFlex=true&stop_mobi=yes&spec_plan=GRPBOD">Reservations</a></button>
-                    <p className="footnote">*Be sure to use a card that does not have international fees</p>
+                    <p className="footnote">You can also reserve by calling Luisa Fernanda at:<br/><a className="phoneNumber" href="tel:+573184487029">+57 318 4487029</a>.<br/>And be sure to use a card that does not have international fees!</p>
                   </div>
                   <div className="hotel">
                     <Hotel name="Cali Marriot Hotel" link="https://www.marriott.com/hotels/travel/clomc-cali-marriott-hotel/" maps="https://goo.gl/maps/UdfhhS7cjNVSnjQf9"/>
@@ -303,33 +303,53 @@ class Home extends React.Component {
                   <p className="answer">The dress code is Black-Tie. Ladies must wear a floor length gown and gentlemen must wear a tuxedo. If you need any help here is a handy
                     guide for black-tie attire: <a className="answer covidLink" href="https://www.brides.com/story/black-tie-wedding-guest-dress-code-long-gowns" target="_blank" rel="noopener noreferrer">Black-Tie Guide</a></p>
                 </div>
-                <button className="question" onClick={e => triggerCollapse(3)}>What is the weather like?</button>
+                <button className="question" onClick={e => triggerCollapse(3)}>Will there be any salons nearby?</button>
+                <div className="answerDiv">
+                  <p className="answer">We recommend two beauty salons, both of which are very close to the hotels:</p>
+                  <div className="location">
+                    <p className="eventDescription"><b>Praga Salón Cali</b><br /></p>
+                    <p className="eventDescription">
+                      Calle 18# 105-149 Local 16, Cali<br/>
+                      Valle del Cauca, Colombia
+                    </p>
+                    <a className="eventDescription mapLink" id="map" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/oRSVEt4ep4SRqx3R9">Open in Google Maps</a>
+                  </div>
+                  <div className="location">
+                    <p className="eventDescription"><b>Fernando Castillo</b><br /></p>
+                    <p className="eventDescription">
+                      Carrera 105A #14 - 00, Cali<br/>
+                      Valle del Cauca, Colombia
+                    </p>
+                    <a className="eventDescription mapLink" href="https://goo.gl/maps/kvhspEQPzUT6vosp9" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+                  </div>
+                </div>
+                <button className="question" onClick={e => triggerCollapse(4)}>What is the weather like?</button>
                 <div className="answerDiv">
                   <p className="answer">The weather in Cali in November is on average 83°F during the day and can go as low as 65°F at night, due to its location in the
                     mountains. The reception will be indoors but the area will not be air conditioned since it’s an open space with cool temperature.</p>
                 </div>
-                <button className="question" onClick={e => triggerCollapse(4)}>What about Covid?</button>
+                <button className="question" onClick={e => triggerCollapse(5)}>What about Covid?</button>
                 <div className="answerDiv">
                   <p className="answer">We are hoping that the world will be a bit closer to normal by the time November comes around, but we will be closely following
                     recommended guidelines at our wedding. Even though it is not required, for the safety of our guests we recommend to get vaccinated. At the moment a PCR test is
                     not required to enter Colombia but you do have to present a Check-Mig registration using the the following link:
                     <a className="answer covidLink" href="https://migracioncolombia.gov.co/" target="_blank" rel="noopener noreferrer"> Migración Colombia</a></p>
                 </div>
-                <button className="question" onClick={e => triggerCollapse(5)}>Where are you registered?</button>
+                <button className="question" onClick={e => triggerCollapse(6)}>Where are you registered?</button>
                 <div className="answerDiv">
                   <p className="answer">We are not registered, your presence at our wedding is the greatest gift of all. If it is your wish to  bless us with a gift, we would
                     greatly appreciate your contribution to our honeymoon fund.</p>
                 </div>
-                <button className="question" onClick={e => triggerCollapse(6)}>Is there parking at the venue?</button>
+                <button className="question" onClick={e => triggerCollapse(7)}>Is there parking at the venue?</button>
                 <div className="answerDiv">
                   <p className="answer">The parking at the church can be a little tricky but there is plenty of parking at the reception. We do recommend to take advantage of
                     our complimentary transportation from the recommended hotels. You may also use Uber or taxis.</p>
                 </div>
-                <button className="question" onClick={e => triggerCollapse(7)}>Can we bring our kids?</button>
+                <button className="question" onClick={e => triggerCollapse(8)}>Can we bring our kids?</button>
                 <div className="answerDiv">
                   <p className="answer">We love your kids, but this is an adults only wedding.</p>
                 </div>
-                <button className="question" onClick={e => triggerCollapse(8)}>How do I RSVP?</button>
+                <button className="question" onClick={e => triggerCollapse(9)}>How do I RSVP?</button>
                 <div className="answerDiv">
                   <p className="answer" style={{ marginBottom: "0px" }}>You can RSVP here:</p>
                   <button className="rsvpButton2 website" onClick={() => this.toggleRSVP()}>RSVP</button>

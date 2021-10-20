@@ -176,6 +176,8 @@
 .mapLink, .websiteLink {
     color:rgb(129, 157, 128);
     cursor:pointer;
+    height:20px;
+    padding-bottom:0px;
 }
 .websiteLink {
     position:relative;
@@ -199,11 +201,15 @@
 .footnote {
     margin-top:0;
     line-height: 25px;
-    color:rgb(168, 168, 168);
+    color:rgb(156, 156, 156);
     font-size: 14px;
 }
 .website {
     margin-top:20px;
+}
+.phoneNumber {
+    font-size:16px;
+    color:rgb(129, 157, 128);
 }
 .photoGallery {
     width:100%;
@@ -312,7 +318,7 @@
     opacity:0;
 }
 .answerDiv.active {
-    padding:10px 0 20px 35px;
+    padding:8px 0 20px 35px;
     margin-bottom:20px;
     opacity:1;
 }
