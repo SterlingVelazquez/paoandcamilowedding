@@ -268,6 +268,7 @@ class Home extends React.Component {
                     <Hotel name="Alko Hotel Casa Níspero" link="https://www.alkohoteles.com/" maps="https://goo.gl/maps/TP56pFhNSMA1k6pR9"/>
                     <Hotel name="Hotel Pance 122" link="https://www.hotelpance122.com/" maps="https://goo.gl/maps/iBeDZeAvGLmPW79SA"/>
                     <Hotel name="Hotel Intercontinental Cali" link="https://www.ihg.com/intercontinental/hotels/us/en/cali/cloha/hoteldetail?cm_mmc=GoogleMaps-_-IC-_-CO-_-CLOHA" maps="https://goo.gl/maps/sxfmr1FYdgBZpEiY7"/>
+                    <Hotel name="Movich Casa del Alferez" link="https://www.movichhotels.com/es/hotel-casalferez-en-cali/?partner=5652&utm_source=google&utm_medium=gmb&utm_campaign=web_link" maps="https://goo.gl/maps/HCeNTkcvaedRDr3AA"/>
                   </div>
                 </p>
               </Fade>
