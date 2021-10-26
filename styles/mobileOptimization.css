@@ -106,9 +106,6 @@
     .photoGallery2 {
         margin-bottom:200px;
     }
-    .paypalBtn {
-        transform:scale(1) translateX(0px) translateY(-5px);
-    }
 }
 
 @media only screen and (max-width: 1040px) {
