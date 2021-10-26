@@ -61,19 +61,19 @@ class Home extends React.Component {
   }
 
   toggleRSVP() {
-    document.getElementById("rsvpform").scrollTo({top:0});
+    document.getElementById("rsvpform").scrollTo({ top: 0 });
     document.getElementById("rsvpform").classList.toggle("show");
     document.getElementById("fullscreenshadow").classList.toggle("show");
   }
   toggleSent() {
-    document.getElementById("rsvpform").scrollTo({top:0});
+    document.getElementById("rsvpform").scrollTo({ top: 0 });
     document.getElementById('rsvpcontainer').classList.toggle("hide");
     document.getElementById("rsvpform").classList.toggle("submit");
   }
   closeRSVP() {
     this.cancelForm();
     document.getElementById('submitcontainer').classList.toggle("show");
-    setTimeout(() => {this.toggleSent()}, 500);
+    setTimeout(() => { this.toggleSent() }, 500);
   }
   submitForm(e) {
     e.preventDefault();
@@ -81,22 +81,22 @@ class Home extends React.Component {
     var response = document.getElementById("accepted").checked ? "Accepted" : "Declined";
     var guests = document.getElementById("rsvpguests").value;
     if (response === "Declined") {
-      Email.send({ 
-        SecureToken: "8be73ead-f4db-4a68-aefa-45df4ba1284d", 
-        To: 'paolarabanal9@gmail.com', 
-        From: "paola@paoandcamilowedding.com", 
+      Email.send({
+        SecureToken: "8be73ead-f4db-4a68-aefa-45df4ba1284d",
+        To: 'paolarabanal9@gmail.com',
+        From: "paola@paoandcamilowedding.com",
         Subject: "Invite declined from " + this.state.firstName,
-        Body: "<html><p>Name: " + name + "</p></br><p>Notes: " + this.state.note + "</p></br></br></html>", 
+        Body: "<html><p>Name: " + name + "</p></br><p>Notes: " + this.state.note + "</p></br></br></html>",
       }).then(function () { })
       document.getElementById("sentsubheader").innerHTML = "We're sorry you couldn't make it! Thank you for letting us know."
     } else {
-      Email.send({ 
-        SecureToken: "8be73ead-f4db-4a68-aefa-45df4ba1284d", 
-        To: 'paolarabanal9@gmail.com', 
-        From: "paola@paoandcamilowedding.com", 
+      Email.send({
+        SecureToken: "8be73ead-f4db-4a68-aefa-45df4ba1284d",
+        To: 'paolarabanal9@gmail.com',
+        From: "paola@paoandcamilowedding.com",
         Subject: "Invite accepted from " + this.state.firstName,
-        Body: "<html><p>Name: " + name + "</p></br><p>Number of Guests: " + guests + "</p></br><p>Notes: " + this.state.note + "</p></br></br></html>", 
-      }).then(function () {})
+        Body: "<html><p>Name: " + name + "</p></br><p>Number of Guests: " + guests + "</p></br><p>Notes: " + this.state.note + "</p></br></br></html>",
+      }).then(function () { })
       document.getElementById("sentsubheader").innerHTML = "Thank you! You will also receive calls from our wedding planner for confirmation."
     }
     document.getElementById('submitcontainer').classList.toggle("show");
@@ -104,10 +104,10 @@ class Home extends React.Component {
   }
   cancelForm() {
     this.toggleRSVP();
-    this.setState({checked: "checked"});
+    this.setState({ checked: "checked" });
     document.getElementById("rsvpform").reset();
   }
-// 08D706D0F07B1C3CA8E5569FE286D5C3C7FC
+  // 08D706D0F07B1C3CA8E5569FE286D5C3C7FC
   onCheck() {
     this.setState({ checked: !this.state.checked });
   }
@@ -147,6 +147,7 @@ class Home extends React.Component {
           <link href="https://fonts.googleapis.com/css2?family=Alice&family=Mulish:wght@200;300&display=swap" rel="stylesheet"></link>
           <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet"></link>
           <link href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet"></link>
+          <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
         </Head>
 
         <main className="main-wrapper">
@@ -236,7 +237,6 @@ class Home extends React.Component {
                 <p className="eventDescription">We will have a complimentary bus running to and from the venue from two recommended hotels.</p>
                 <p className="eventDescription"><b>Bus Schedule</b></p>
                 <p className="eventDescription">2:30pm - Departure from Hilton Garden Inn</p>
-                <p className="eventDescription">3:00pm - Departure from Cali Marriott Hotel</p>
                 <p className="eventDescription">1:00-4:00am - Multiple return trips to hotels</p>
               </Fade>
             </div>
@@ -256,19 +256,19 @@ class Home extends React.Component {
                       Cl. 15a #100 21, Cali<br />
                       Valle del Cauca, Colombia
                     </p>
-                    <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/mVEy4BbeqkemzkV98">Open in Google Maps</a><br/>
+                    <a className="eventDescription mapLink" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/mVEy4BbeqkemzkV98">Open in Google Maps</a><br />
                     <a className="eventDescription websiteLink" target="_blank" rel="noopener noreferrer" href="https://www.hilton.com/en/hotels/cloccgi-hilton-garden-inn-cali-ciudad-jardin/?SEO_id=GMB-GI-CLOCCGI&y_source=1_MTkzOTkzNzMtNzE1LWxvY2F0aW9uLmdvb2dsZV93ZWJzaXRlX292ZXJyaWRl">Go to Hotel Website</a>
-                    <br/>
+                    <br />
                     <button className="rsvpButton2 reservation"><a target="_blank" rel="noopener noreferrer" href="https://secure3.hilton.com/en_US/GI/reservation/book.htm?inputModule=HOTEL&ctyhocn=CLOCCGI&arrival=20211125&departure=20211126&datesFlex=true&stop_mobi=yes&spec_plan=GRPBOD">Reservations</a></button>
-                    <p className="footnote">You can also reserve by calling Luisa Fernanda at:<br/><a className="phoneNumber" href="tel:+573184487029">+57 318 4487029</a>.<br/>And be sure to use a card that does not have international fees!</p>
+                    <p className="footnote">You can also reserve by calling Luisa Fernanda at:<br /><a className="phoneNumber" href="tel:+573184487029">+57 318 4487029</a>.<br />And be sure to use a card that does not have international fees!</p>
                   </div>
                   <div className="hotel">
-                    <Hotel name="Movich Casa del Alferez" link="https://www.movichhotels.com/es/hotel-casalferez-en-cali/?partner=5652&utm_source=google&utm_medium=gmb&utm_campaign=web_link" maps="https://goo.gl/maps/HCeNTkcvaedRDr3AA"/>
-                    <Hotel name="Cali Marriot Hotel" link="https://www.marriott.com/hotels/travel/clomc-cali-marriott-hotel/" maps="https://goo.gl/maps/UdfhhS7cjNVSnjQf9"/>
-                    <Hotel name="Acqua Santa Lofts Hotel" link="http://www.acquasantahotel.com/inicio/" maps="https://goo.gl/maps/r9qttANd64pogjHG7"/>
-                    <Hotel name="Alko Hotel Casa Níspero" link="https://www.alkohoteles.com/" maps="https://goo.gl/maps/TP56pFhNSMA1k6pR9"/>
-                    <Hotel name="Hotel Pance 122" link="https://www.hotelpance122.com/" maps="https://goo.gl/maps/iBeDZeAvGLmPW79SA"/>
-                    <Hotel name="Hotel Intercontinental Cali" link="https://www.ihg.com/intercontinental/hotels/us/en/cali/cloha/hoteldetail?cm_mmc=GoogleMaps-_-IC-_-CO-_-CLOHA" maps="https://goo.gl/maps/sxfmr1FYdgBZpEiY7"/>
+                    <Hotel name="Movich Casa del Alferez" link="https://www.movichhotels.com/es/hotel-casalferez-en-cali/?partner=5652&utm_source=google&utm_medium=gmb&utm_campaign=web_link" maps="https://goo.gl/maps/HCeNTkcvaedRDr3AA" />
+                    <Hotel name="Cali Marriot Hotel" link="https://www.marriott.com/hotels/travel/clomc-cali-marriott-hotel/" maps="https://goo.gl/maps/UdfhhS7cjNVSnjQf9" />
+                    <Hotel name="Acqua Santa Lofts Hotel" link="http://www.acquasantahotel.com/inicio/" maps="https://goo.gl/maps/r9qttANd64pogjHG7" />
+                    <Hotel name="Alko Hotel Casa Níspero" link="https://www.alkohoteles.com/" maps="https://goo.gl/maps/TP56pFhNSMA1k6pR9" />
+                    <Hotel name="Hotel Pance 122" link="https://www.hotelpance122.com/" maps="https://goo.gl/maps/iBeDZeAvGLmPW79SA" />
+                    <Hotel name="Hotel Intercontinental Cali" link="https://www.ihg.com/intercontinental/hotels/us/en/cali/cloha/hoteldetail?cm_mmc=GoogleMaps-_-IC-_-CO-_-CLOHA" maps="https://goo.gl/maps/sxfmr1FYdgBZpEiY7" />
                   </div>
                 </p>
               </Fade>
@@ -310,7 +310,7 @@ class Home extends React.Component {
                   <div className="location">
                     <p className="eventDescription"><b>Praga Salón Cali</b><br /></p>
                     <p className="eventDescription">
-                      Calle 18# 105-149 Local 16, Cali<br/>
+                      Calle 18# 105-149 Local 16, Cali<br />
                       Valle del Cauca, Colombia
                     </p>
                     <a className="eventDescription mapLink" id="map" target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/oRSVEt4ep4SRqx3R9">Open in Google Maps</a>
@@ -318,7 +318,7 @@ class Home extends React.Component {
                   <div className="location">
                     <p className="eventDescription"><b>Fernando Castillo</b><br /></p>
                     <p className="eventDescription">
-                      Carrera 105A #14 - 00, Cali<br/>
+                      Carrera 105A #14 - 00, Cali<br />
                       Valle del Cauca, Colombia
                     </p>
                     <a className="eventDescription mapLink" href="https://goo.gl/maps/kvhspEQPzUT6vosp9" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
