@@ -335,7 +335,7 @@ class Home extends React.Component {
                     recommended guidelines at our wedding. Even though it is not required, for the safety of our guests we recommend to get vaccinated. At the moment a PCR test is
                     not required to enter Colombia but you do have to present a Check-Mig registration using the the following link:
                     <a className="answer covidLink" href="https://migracioncolombia.gov.co/" target="_blank" rel="noopener noreferrer"> Migración Colombia</a><br/><br/>
-                    We have scheduled a COVID Test (Antigen) to be performed in your hotel room for all of our Hilton guests. This service will be available on Saturday, November 27th
+                    We have scheduled a COVID Test (Antigen) to be performed in your hotel room for all of our Hilton guests. This service will be available for $32 USD on Saturday, November 27th
                     starting at 8 AM.</p>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(6)}>Where are you registered?</button>
