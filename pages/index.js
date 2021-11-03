@@ -342,6 +342,7 @@ class Home extends React.Component {
                 <div className="answerDiv">
                   <p className="answer">We are not registered, your presence at our wedding is the greatest gift of all. If it is your wish to  bless us with a gift, we would
                     greatly appreciate your contribution to our honeymoon fund.</p>
+                  <button className="rsvpButton2 honeymoon"><a target="_blank" rel="noopener noreferrer" href="https://www.honeyfund.com/wedding/rabanal-losada-11-27-2021">Honeymoon Fund</a></button>
                 </div>
                 <button className="question" onClick={e => triggerCollapse(7)}>Is there parking at the venue?</button>
                 <div className="answerDiv">

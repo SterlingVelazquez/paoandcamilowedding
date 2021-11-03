@@ -79,7 +79,6 @@
         margin:40px 0 35px 0;
     }
     .rsvpButton {
-        height:45px; width:150px;
         font-size: 20px;
     }
 
@@ -120,7 +119,6 @@
         font-size:42px;
     }
     .rsvpButton2 {
-        height:50px; width:140px;
         font-size:19px;
     }
 
@@ -143,7 +141,6 @@
     }
     .rsvpButton2.reservation {
         margin-top:30px;
-        width:160px;
         letter-spacing:3px;
         font-size:17px;
     }
@@ -277,7 +274,6 @@
 
 @media only screen and (max-width: 767px) {
     .rsvpButton2 {
-        height:45px; width:130px;
         font-size:17px;
     }
 

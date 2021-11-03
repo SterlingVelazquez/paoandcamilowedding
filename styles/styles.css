@@ -91,7 +91,7 @@
     animation: titleSlide 2.1s ease-out;
 }
 .rsvpButton, .rsvpButton2 {
-    height:60px; width:180px;
+    padding:15px 50px;
     background:none;
     border:thin solid white;
     font-family: 'Mulish', sans-serif;
@@ -107,7 +107,7 @@
     transform:scale(1.05);
 }
 .rsvpButton2 {
-    height:50px; width:140px;
+    padding:12px 35px;
     font-size: 18px;
     border:thin solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);
@@ -194,8 +194,8 @@
     left: 40px;
 }
 .reservation {
+    padding:12px 18px;
     margin-top:30px;
-    width:180px;
     letter-spacing:3px;
 }
 .footnote {
@@ -206,6 +206,11 @@
 }
 .website {
     margin-top:20px;
+}
+.honeymoon {
+    margin-top:5px;
+    padding:12px 15px;
+    letter-spacing:3px;
 }
 .phoneNumber {
     font-size:16px;
