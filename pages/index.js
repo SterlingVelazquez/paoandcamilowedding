@@ -177,7 +177,7 @@ class Home extends React.Component {
                 <button className="rsvpButton2 website" onClick={() => this.toggleRSVP()}>RSVP</button>
                 <p className="eventTitle">Schedule</p>
                 <p className="eventDescription"><b>Friday, November 26th</b></p>
-                <p className="eventDescription">5:30 p.m. Cocktail Hour</p>
+                <p className="eventDescription">6:00 p.m. Cocktail Hour</p>
                 <p className="eventDescription"><b>Saturday, November 27th</b></p>
                 <p className="eventDescription">4:00 p.m. Ceremony</p>
                 <p className="eventDescription">6:00 - 3:00 a.m. Reception</p>
